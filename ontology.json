@@ -1,0 +1,151 @@
+[ {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Context ontology for digital construction"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Entities#"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#ContentGraph",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#Context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#ContextFramework",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitFramework",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#dependsOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#hasDependent"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContentGraph"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#isContentOf"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContextFramework"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#isContextOf"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasDependent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasQuantityKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitFramework"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#isContentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContentGraph"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#isContextOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContextFramework"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#nextContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#previousContext"
+  } ]
+}, {
+  "@id" : "http://w3id.org/digitalconstruction/Contexts#previousContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+  } ]
+} ]

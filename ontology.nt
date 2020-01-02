@@ -1,0 +1,103 @@
+<http://w3id.org/digitalconstruction/Contexts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/digitalconstruction/Contexts> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/digitalconstruction/Entities#> .
+<http://w3id.org/digitalconstruction/Contexts> <http://www.w3.org/2000/01/rdf-schema#label> "Context ontology for digital construction" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/digitalconstruction/Contexts#dependsOn
+<http://w3id.org/digitalconstruction/Contexts#dependsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#dependsOn> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/digitalconstruction/Contexts#hasDependent> .
+<http://w3id.org/digitalconstruction/Contexts#dependsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
+<http://w3id.org/digitalconstruction/Contexts#dependsOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#hasContent
+<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/digitalconstruction/Contexts#isContentOf> .
+<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
+<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#ContentGraph> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#hasContext
+<http://w3id.org/digitalconstruction/Contexts#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasContext> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/digitalconstruction/Contexts#isContextOf> .
+<http://w3id.org/digitalconstruction/Contexts#hasContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#ContextFramework> .
+<http://w3id.org/digitalconstruction/Contexts#hasContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#hasDependent
+<http://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
+<http://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit
+<http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#UnitAssignment> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#hasQuantityKind
+<http://w3id.org/digitalconstruction/Contexts#hasQuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#UnitAssignment> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#hasUnit
+<http://w3id.org/digitalconstruction/Contexts#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#UnitAssignment> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment
+<http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#UnitFramework> .
+<http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#UnitAssignment> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#isContentOf
+<http://w3id.org/digitalconstruction/Contexts#isContentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#isContentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#ContentGraph> .
+<http://w3id.org/digitalconstruction/Contexts#isContentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#isContextOf
+<http://w3id.org/digitalconstruction/Contexts#isContextOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#isContextOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
+<http://w3id.org/digitalconstruction/Contexts#isContextOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#ContextFramework> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#nextContext
+<http://w3id.org/digitalconstruction/Contexts#nextContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#nextContext> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/digitalconstruction/Contexts#previousContext> .
+<http://w3id.org/digitalconstruction/Contexts#nextContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
+<http://w3id.org/digitalconstruction/Contexts#nextContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#previousContext
+<http://w3id.org/digitalconstruction/Contexts#previousContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/digitalconstruction/Contexts#previousContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
+<http://w3id.org/digitalconstruction/Contexts#previousContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/digitalconstruction/Contexts#ContentGraph
+<http://w3id.org/digitalconstruction/Contexts#ContentGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Contexts#ContentGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Entities#IdentifiableEntity> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#Context
+<http://w3id.org/digitalconstruction/Contexts#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Contexts#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Entities#IdentifiableEntity> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#ContextFramework
+<http://w3id.org/digitalconstruction/Contexts#ContextFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Contexts#ContextFramework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Entities#IdentifiableEntity> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#UnitAssignment
+<http://w3id.org/digitalconstruction/Contexts#UnitAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Contexts#UnitAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Entities#IdentifiableEntity> .
+# 
+# http://w3id.org/digitalconstruction/Contexts#UnitFramework
+<http://w3id.org/digitalconstruction/Contexts#UnitFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/digitalconstruction/Contexts#UnitFramework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Entities#IdentifiableEntity> .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
