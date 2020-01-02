@@ -12,6 +12,8 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/digitalconstruction/Contexts">
         <owl:imports rdf:resource="https://w3id.org/digitalconstruction/Entities#"/>
+        <dc:creator>Seppo Törmä (seppo.torma@visualynk.com)</dc:creator>
+        <dc:creator>Yuan Zheng (yuan.zheng@aalto.fi)</dc:creator>
         <rdfs:label>Context ontology for digital construction</rdfs:label>
     </owl:Ontology>
     

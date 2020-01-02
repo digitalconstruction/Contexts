@@ -1,6 +1,11 @@
 [ {
   "@id" : "http://w3id.org/digitalconstruction/Contexts",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Seppo Törmä (seppo.torma@visualynk.com)"
+  }, {
+    "@value" : "Yuan Zheng (yuan.zheng@aalto.fi)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Context ontology for digital construction"
   } ],
