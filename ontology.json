@@ -6,6 +6,9 @@
   }, {
     "@value" : "Yuan Zheng (yuan.zheng@aalto.fi)"
   } ],
+  "http://purl.org/dc/elements/1.1/license" : [ {
+    "@value" : "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Context ontology for digital construction"
   } ],

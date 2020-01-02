@@ -2,6 +2,7 @@
 <http://w3id.org/digitalconstruction/Contexts> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/digitalconstruction/Entities#> .
 <http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä (seppo.torma@visualynk.com)" .
 <http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/creator> "Yuan Zheng (yuan.zheng@aalto.fi)" .
+<http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/license> "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)" .
 <http://w3id.org/digitalconstruction/Contexts> <http://www.w3.org/2000/01/rdf-schema#label> "Context ontology for digital construction" .
 # 
 # 

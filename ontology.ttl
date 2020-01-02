@@ -10,6 +10,7 @@
                                                 owl:imports <https://w3id.org/digitalconstruction/Entities#> ;
                                                 <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä (seppo.torma@visualynk.com)" ,
                                                                                           "Yuan Zheng (yuan.zheng@aalto.fi)" ;
+                                                <http://purl.org/dc/elements/1.1/license> "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)" ;
                                                 rdfs:label "Context ontology for digital construction" .
 
 #################################################################

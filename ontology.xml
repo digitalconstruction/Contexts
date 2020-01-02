@@ -14,6 +14,7 @@
         <owl:imports rdf:resource="https://w3id.org/digitalconstruction/Entities#"/>
         <dc:creator>Seppo Törmä (seppo.torma@visualynk.com)</dc:creator>
         <dc:creator>Yuan Zheng (yuan.zheng@aalto.fi)</dc:creator>
+        <dc:license>CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)</dc:license>
         <rdfs:label>Context ontology for digital construction</rdfs:label>
     </owl:Ontology>
     
