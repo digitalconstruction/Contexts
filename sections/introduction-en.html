@@ -1,13 +1,83 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-To capture the evolution of construction data during a project, each
-value is associated with a context. The content of a context is contained
-in multiple named graphs. Each piece of RDF data - that is, an RDF
-statement or a triple - belongs to a particular graph. The same
-property of a same object can have multiple different values belonging
-to different graphs.
+<p>
+Construction and renovation projects are characterized the evolution of information over the duration of their
+execution. The designs start from abstract requirements and proceeds to increasingly refined models, also branching
+according to different disciplines (architectural design, structural engineering, and so on). Various – and potentially
+also evolving – groupings of the entities are defined for different tasks such as procurement, transportation and
+installation. Moreover, the planning of the work starts from high-level objectives and constraints, and proceeds from
+project plans and master schedules to phase schedules, lookahead plans and weekly plans.
+</p>
+<p>
+In the both refinement dimensions – design and planning – each successive level refines the information contained in the
+previous level by adding new information about the entities that already existed, and also add new entities, typically
+as substructure of the already specified entities at the previous refinement levels. The amount of information can grow
+many times over from one level to the next. In practice, each level also introduces incompatible changes such as
+removing existing entities or giving revised values to properties.
+</p>
+<p>
+In the design area these stages of refinement – or levels of detail/development – have been specified as different LOD
+frameworks, most containing prespecified levels with unambiguous content requirements. In the planning domain, the
+levels are usually more loosely defined and based on prevailing practices. It should be noted that if plans are created
+in reference to building objects or spaces, the plans will also depend on the design information. That is, a particular
+plan may be based on design information at a particular level of refinement.
+</p>
+<p>
+In addition to the refinement of information, renovation and construction projects are also characterized by unexpected
+and unplanned changes that create a need to change designs or plans. Consequently, there will be additional contexts of
+information that are dynamically created during the execution. The change management needs apply both to BIM models and
+construction plans, as well as some other relevant organizing information, such as breakdown structures.
+</p>
+<p>
+This all means that renovation projects are characterized by a very complex structure of information contexts consisting of 
+independently developing but interdependent threads of refinement (design and plans are refined separately but plans depend on designs),
+partly predefined and partly dynamic set of contexts in each thread.
+</p>
+<p>
+There are multiple alternative ways to represent multi-context data in RDF from explicit ontology-level modelling of
+qualified properties such as in PROV-O (Lebo, 2013) or BFO-ISO (BFO-ISO, 2019), generic objectified properties such as
+in OPM (Rasmussen, 2018), RDF reification (Brickley, 2014), singleton properties (Nguyen, 2014), and various ways of
+using the named graphs of RDF Dataset such as nanopublications (Groth, 2010) or OVOpub (Callahan, 2013).
+</p>
+<p>
+The model adopted in this ontology is based on the last approach, the utilization of named graphs of RDF Datasets. The
+reason is that since construction is an organized engineering-oriented discipline,
+</p>
+<ul>
+  <li>There are usually large datasets whose entities belong to the same context and have the same provenance
+  information (BIM models, construction plans, breakdown structures);
+  </li>
+  <li>The static property metadata (such as quantity kinds, units of measurement, and tolerances) is similar
+  throughout the same dataset for the same properties, since they are results of organized design, engineering or
+  management work.
+  </li>
+</ul>
+<p>
+The ontology is therefore based on the following principles:
+</p>
+<ul>
+  <li>Each dataset is stored into a separate named graph of an RDF dataset. If the dataset contains data that has
+  different origin or different context – such as different LOD level – the dataset needs to be split into several
+  parts, each of which has the same context and provenance, that are stored in separate named graphs.
+  </li>
+  <li>The context, provenance and property metadata are recorded at the graph level. This is possible since a graph has
+  an identity (a URI) which can be associated with information. This metadata is stored in the default graph of the RDF
+  dataset.
+  </li>
+  <li>Proper ontologies for metadata are used to enable the representation of the contexts together with their mutual
+  relations, the provenance of the data and the relevant property metadata at graph level.
+  </li>
+</ul>
+<p>
+This solution makes it possible to manage context-related data about any entities and any properties in a transparent
+and orthogonal manner. Moreover, many Semantic Web tools work well with this model: RDF databases support it, there is a
+standard serialization format called Trig (Bizer, 2014) – that is based on Turtle (Prud'hommeaux, 2014) – for
+serializing RDF datasets containing named graphs, and SPARQL has constructs to make queries to specific named graphs or
+to record the named graph in which an RDF statement (a triple) belongs to. Finally, the graph-level representation is
+extremely economic in terms of the storage capacity.
+</p>
 
-<img src="context-model.png">
+<img src="sections/context-model.png">
 
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
