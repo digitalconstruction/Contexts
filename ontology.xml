@@ -9,14 +9,67 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://w3id.org/digitalconstruction/Contexts">
         <owl:imports rdf:resource="https://w3id.org/digitalconstruction/Entities#"/>
         <dc:creator>Seppo Törmä (seppo.torma@visualynk.com)</dc:creator>
         <dc:creator>Yuan Zheng (yuan.zheng@aalto.fi)</dc:creator>
-        <dc:license>CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)</dc:license>
+        <dc:date>2019-12-20</dc:date>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dc:title>Contexts in digital construction</dc:title>
+        <terms:description>Context ontology provides the basic representation mechanisms for multi-context information present in all contruction and renovation projects, including planned and actual values, as-designed and as-built models, and different levels of detail/development. The ontology allows the definition of different context frameworks, to create contexts withing the frameworks, and associating content to contexts. At the implementation level, the content is stored in different named graphs of an RDF Dataset and the representation of context frameworks anbd contexts are managed in the default graph of the RDF Dataset.</terms:description>
+        <vann:preferredNamespacePrefix>ctx</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/digitalconstruction/Contexts</vann:preferredNamespaceUri>
         <rdfs:label>Context ontology for digital construction</rdfs:label>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
@@ -150,6 +203,28 @@
         <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:range rdf:resource="http://w3id.org/digitalconstruction/Contexts#Context"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/digitalconstruction/Contexts#hasNamedGraph -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/digitalconstruction/Contexts#hasNamedGraph">
+        <rdfs:domain rdf:resource="http://w3id.org/digitalconstruction/Contexts#ContentGraph"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
     
 
 

@@ -2,8 +2,37 @@
 <http://w3id.org/digitalconstruction/Contexts> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/digitalconstruction/Entities#> .
 <http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä (seppo.torma@visualynk.com)" .
 <http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/creator> "Yuan Zheng (yuan.zheng@aalto.fi)" .
-<http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/license> "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)" .
+<http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/date> "2019-12-20" .
+<http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/elements/1.1/title> "Contexts in digital construction" .
+<http://w3id.org/digitalconstruction/Contexts> <http://purl.org/dc/terms/description> "Context ontology provides the basic representation mechanisms for multi-context information present in all contruction and renovation projects, including planned and actual values, as-designed and as-built models, and different levels of detail/development. The ontology allows the definition of different context frameworks, to create contexts withing the frameworks, and associating content to contexts. At the implementation level, the content is stored in different named graphs of an RDF Dataset and the representation of context frameworks anbd contexts are managed in the default graph of the RDF Dataset." .
+<http://w3id.org/digitalconstruction/Contexts> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ctx" .
+<http://w3id.org/digitalconstruction/Contexts> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/digitalconstruction/Contexts" .
 <http://w3id.org/digitalconstruction/Contexts> <http://www.w3.org/2000/01/rdf-schema#label> "Context ontology for digital construction" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -73,6 +102,20 @@
 <http://w3id.org/digitalconstruction/Contexts#previousContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/digitalconstruction/Contexts#previousContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
 <http://w3id.org/digitalconstruction/Contexts#previousContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/digitalconstruction/Contexts#hasNamedGraph
+<http://w3id.org/digitalconstruction/Contexts#hasNamedGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasNamedGraph> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#ContentGraph> .
+<http://w3id.org/digitalconstruction/Contexts#hasNamedGraph> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 # 
 # 
 # 
