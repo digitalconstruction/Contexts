@@ -60,12 +60,6 @@
 <http://w3id.org/digitalconstruction/Contexts#dependsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
 <http://w3id.org/digitalconstruction/Contexts#dependsOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
 # 
-# http://w3id.org/digitalconstruction/Contexts#hasContent
-<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/digitalconstruction/Contexts#isContentOf> .
-<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
-<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#ContentGraph> .
-# 
 # http://w3id.org/digitalconstruction/Contexts#hasContext
 <http://w3id.org/digitalconstruction/Contexts#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/digitalconstruction/Contexts#hasContext> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/digitalconstruction/Contexts#isContextOf> .
@@ -76,6 +70,7 @@
 <http://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
 <http://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
+<http://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/2000/01/rdf-schema#comment> "Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design." .
 # 
 # http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit
 <http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -93,11 +88,6 @@
 <http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#UnitFramework> .
 <http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#UnitAssignment> .
-# 
-# http://w3id.org/digitalconstruction/Contexts#isContentOf
-<http://w3id.org/digitalconstruction/Contexts#isContentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/digitalconstruction/Contexts#isContentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#ContentGraph> .
-<http://w3id.org/digitalconstruction/Contexts#isContentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/digitalconstruction/Contexts#Context> .
 # 
 # http://w3id.org/digitalconstruction/Contexts#isContextOf
 <http://w3id.org/digitalconstruction/Contexts#isContextOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -124,10 +114,14 @@
 # #################################################################
 # 
 # 
-# http://w3id.org/digitalconstruction/Contexts#hasNamedGraph
-<http://w3id.org/digitalconstruction/Contexts#hasNamedGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/digitalconstruction/Contexts#hasNamedGraph> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#ContentGraph> .
-<http://w3id.org/digitalconstruction/Contexts#hasNamedGraph> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# http://w3id.org/digitalconstruction/Contexts#hasContent
+<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/digitalconstruction/Contexts#Context> .
+<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs." .
+# 
+# http://w3id.org/digitalconstruction/Contexts#isContentOf
+<http://w3id.org/digitalconstruction/Contexts#isContentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # 
 # 
@@ -137,10 +131,6 @@
 # #
 # #################################################################
 # 
-# 
-# http://w3id.org/digitalconstruction/Contexts#ContentGraph
-<http://w3id.org/digitalconstruction/Contexts#ContentGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/digitalconstruction/Contexts#ContentGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/Entities#IdentifiableEntity> .
 # 
 # http://w3id.org/digitalconstruction/Contexts#Context
 <http://w3id.org/digitalconstruction/Contexts#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

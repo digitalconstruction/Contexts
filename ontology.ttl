@@ -68,13 +68,6 @@
            rdfs:range :Context .
 
 
-###  http://w3id.org/digitalconstruction/Contexts#hasContent
-:hasContent rdf:type owl:ObjectProperty ;
-            owl:inverseOf :isContentOf ;
-            rdfs:domain :Context ;
-            rdfs:range :ContentGraph .
-
-
 ###  http://w3id.org/digitalconstruction/Contexts#hasContext
 :hasContext rdf:type owl:ObjectProperty ;
             owl:inverseOf :isContextOf ;
@@ -85,7 +78,8 @@
 ###  http://w3id.org/digitalconstruction/Contexts#hasDependent
 :hasDependent rdf:type owl:ObjectProperty ;
               rdfs:domain :Context ;
-              rdfs:range :Context .
+              rdfs:range :Context ;
+              rdfs:comment "Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design." .
 
 
 ###  http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit
@@ -107,12 +101,6 @@
 :hasUnitAssignment rdf:type owl:ObjectProperty ;
                    rdfs:domain :UnitFramework ;
                    rdfs:range :UnitAssignment .
-
-
-###  http://w3id.org/digitalconstruction/Contexts#isContentOf
-:isContentOf rdf:type owl:ObjectProperty ;
-             rdfs:domain :ContentGraph ;
-             rdfs:range :Context .
 
 
 ###  http://w3id.org/digitalconstruction/Contexts#isContextOf
@@ -138,20 +126,20 @@
 #    Data properties
 #################################################################
 
-###  http://w3id.org/digitalconstruction/Contexts#hasNamedGraph
-:hasNamedGraph rdf:type owl:DatatypeProperty ;
-               rdfs:domain :ContentGraph ;
-               rdfs:range xsd:anyURI .
+###  http://w3id.org/digitalconstruction/Contexts#hasContent
+:hasContent rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Context ;
+            rdfs:range xsd:anyURI ;
+            rdfs:comment "Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs." .
+
+
+###  http://w3id.org/digitalconstruction/Contexts#isContentOf
+:isContentOf rdf:type owl:DatatypeProperty .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://w3id.org/digitalconstruction/Contexts#ContentGraph
-:ContentGraph rdf:type owl:Class ;
-              rdfs:subClassOf <https://w3id.org/digitalconstruction/Entities#IdentifiableEntity> .
-
 
 ###  http://w3id.org/digitalconstruction/Contexts#Context
 :Context rdf:type owl:Class ;

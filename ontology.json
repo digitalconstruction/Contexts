@@ -64,12 +64,6 @@
     "@id" : "https://w3id.org/digitalconstruction/Entities#"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#ContentGraph",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
-  } ]
-}, {
   "@id" : "http://w3id.org/digitalconstruction/Contexts#Context",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -119,15 +113,15 @@
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Contexts#hasContent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContentGraph"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#isContentOf"
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Contexts#hasContext",
@@ -144,20 +138,14 @@
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Contexts#hasDependent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
-  } ]
-}, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasNamedGraph",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContentGraph"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit",
@@ -188,13 +176,7 @@
   } ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Contexts#isContentOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContentGraph"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://w3id.org/digitalconstruction/Contexts#isContextOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],

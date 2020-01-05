@@ -4,12 +4,6 @@ This section provides details for each class and property defined by Context ont
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#ContentGraph"
-            title="http://w3id.org/digitalconstruction/Contexts#ContentGraph">
-            <span>content graph</span>
-         </a>
-      </li>
-      <li>
          <a href="#Context"
             title="http://w3id.org/digitalconstruction/Contexts#Context">
             <span>context</span>
@@ -34,35 +28,6 @@ This section provides details for each class and property defined by Context ont
          </a>
       </li>
    </ul>
-   <div class="entity" id="ContentGraph">
-      <h3>content graph<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#ContentGraph</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted"
-                  title="https://w3id.org/digitalconstruction/Entities#IdentifiableEntity">identifiable entity</span>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasNamedGraph"
-               title="http://w3id.org/digitalconstruction/Contexts#hasNamedGraph">has named graph</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#isContentOf"
-               title="http://w3id.org/digitalconstruction/Contexts#isContentOf">is content of</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasContent"
-               title="http://w3id.org/digitalconstruction/Contexts#hasContent">has content</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Context">
       <h3>context<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -85,7 +50,7 @@ This section provides details for each class and property defined by Context ont
                title="http://w3id.org/digitalconstruction/Contexts#dependsOn">depends on</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasContent"
                title="http://w3id.org/digitalconstruction/Contexts#hasContent">has content</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasDependent"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDependent"
                title="http://w3id.org/digitalconstruction/Contexts#hasDependent">has dependent</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isContextOf"
                title="http://w3id.org/digitalconstruction/Contexts#isContextOf">is context of</a>
@@ -103,8 +68,6 @@ This section provides details for each class and property defined by Context ont
                title="http://w3id.org/digitalconstruction/Contexts#hasContext">has context</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasDependent"
                title="http://w3id.org/digitalconstruction/Contexts#hasDependent">has dependent</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#isContentOf"
-               title="http://w3id.org/digitalconstruction/Contexts#isContentOf">is content of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#nextContext"
                title="http://w3id.org/digitalconstruction/Contexts#nextContext">next context</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#previousContext"
@@ -211,12 +174,6 @@ This section provides details for each class and property defined by Context ont
          </a>
       </li>
       <li>
-         <a href="#hasContent"
-            title="http://w3id.org/digitalconstruction/Contexts#hasContent">
-            <span>has content</span>
-         </a>
-      </li>
-      <li>
          <a href="#hasContext"
             title="http://w3id.org/digitalconstruction/Contexts#hasContext">
             <span>has context</span>
@@ -250,12 +207,6 @@ This section provides details for each class and property defined by Context ont
          <a href="#hasUnitAssignment"
             title="http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">
             <span>has unit assignment</span>
-         </a>
-      </li>
-      <li>
-         <a href="#isContentOf"
-            title="http://w3id.org/digitalconstruction/Contexts#isContentOf">
-            <span>is content of</span>
          </a>
       </li>
       <li>
@@ -307,36 +258,6 @@ This section provides details for each class and property defined by Context ont
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasContent">
-      <h3>has content<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasContent</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Context"
-                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#ContentGraph"
-                  title="http://w3id.org/digitalconstruction/Contexts#ContentGraph">content graph</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#isContentOf"
-                  title="http://w3id.org/digitalconstruction/Contexts#isContentOf">is content of</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasContext">
       <h3>has context<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -374,6 +295,9 @@ This section provides details for each class and property defined by Context ont
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasDependent</p>
+      <div class="comment">
+         <span class="markdown">Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -475,36 +399,6 @@ This section provides details for each class and property defined by Context ont
          </dl>
       </div>
    </div>
-   <div class="entity" id="isContentOf">
-      <h3>is content of<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#isContentOf</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ContentGraph"
-                  title="http://w3id.org/digitalconstruction/Contexts#ContentGraph">content graph</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Context"
-                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#hasContent"
-                  title="http://w3id.org/digitalconstruction/Contexts#hasContent">has content</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="isContextOf">
       <h3>is context of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -599,25 +493,28 @@ This section provides details for each class and property defined by Context ont
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasNamedGraph"
-            title="http://w3id.org/digitalconstruction/Contexts#hasNamedGraph">
-            <span>has named graph</span>
+         <a href="#hasContent"
+            title="http://w3id.org/digitalconstruction/Contexts#hasContent">
+            <span>has content</span>
          </a>
       </li>
    </ul>
-   <div class="entity" id="hasNamedGraph">
-      <h3>has named graph<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="hasContent">
+      <h3>has content<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasNamedGraph</p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasContent</p>
+      <div class="comment">
+         <span class="markdown">Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ContentGraph"
-                  title="http://w3id.org/digitalconstruction/Contexts#ContentGraph">content graph</a>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
