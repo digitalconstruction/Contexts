@@ -2,7 +2,13 @@
 
 <p> Construction lifecycle is characterized by the evolution of information in many different areas: requirements,
 designs, plans, progress of execution, and so on. The volume of information grows, and objects are removed and their
-relations and properties are changed. Designs starts from abstract requirements and proceeds to increasingly refined
+relations and properties are changed. It is important for the analysis, evaluation and management of projects to be able to
+compare information across different contexts: how are the actual values when compared to planned values, how has design
+changed between levels of detail, do the designs comply to requirements, and so on. It is therefore not sufficient to
+overwrite the properties with most recent values, but to represent the development of values over multiple
+contexts.  Context ontology provides the basic representational capabilities to make this possible.  </p>
+
+<p> Designs starts from abstract requirements and proceeds to increasingly refined
 models, also branching according to different disciplines: architectural design, structural engineering, and so
 on. Various groupings of the entities are created and managed for different tasks such as procurement, transportation
 and installation. Moreover, the planning of the work starts from high-level objectives and constraints, and proceeds
@@ -48,7 +54,7 @@ organized and engineering-oriented: </p>
 The ontology is therefore based on the following principles:
 </p>
 
-<ul>
+<ol>
   <li>Each dataset is stored into a separate named graph of an RDF dataset. If the dataset contains data that has
   different origin or different context – such as different LOD level – the dataset needs to be split into several
   parts, each of which has the same context and provenance, that are stored in separate named graphs.
@@ -60,9 +66,9 @@ The ontology is therefore based on the following principles:
   <li>Proper ontologies for metadata are used to enable the representation of the contexts together with their mutual
   relations, the provenance of the data and the relevant property metadata at graph level.
   </li>
-</ul>
+</ol>
 
-<img src="sections/context-named-graph-example.png" alt="Context model" height="260">
+<img src="sections/context-named-graph-example.png" alt="Example of context and named graphs" height="320" align="middle">
 
 <p>
 The graph-based approach makes it possible to manage context-related data about any entities and any properties in a transparent
