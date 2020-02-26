@@ -1,0 +1,9 @@
+To capture the evolution of construction data during a project, each
+value is associated with a context. The content of a context is contained
+in multiple named graphs. Each piece of RDF data - that is, an RDF
+statement or a triple - belongs to a particular graph. The same
+property of a same object can have multiple different values belonging
+to different graphs.
+
+<img src="context-model.png">
+

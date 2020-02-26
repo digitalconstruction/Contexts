@@ -1,0 +1,535 @@
+<h2 id="crossreference" class="list">Cross reference for Digital construction - Contexts classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Digital construction - Contexts.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Context"
+            title="http://w3id.org/digitalconstruction/Contexts#Context">
+            <span>context</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ContextFramework"
+            title="http://w3id.org/digitalconstruction/Contexts#ContextFramework">
+            <span>context framework</span>
+         </a>
+      </li>
+      <li>
+         <a href="#UnitAssignment"
+            title="http://w3id.org/digitalconstruction/Contexts#UnitAssignment">
+            <span>unit assignment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#UnitFramework"
+            title="http://w3id.org/digitalconstruction/Contexts#UnitFramework">
+            <span>unit framework</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="Context">
+      <h3>context<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#Context</p>
+      <div class="comment">
+         <span class="markdown">An identified realm of data, representing the circumstances in which the data can be considered true. Examples are (1) intentional contexts such as a requirement definition, a plan or a design, (2) actual contexts such as actual activity execution or a model of constructed building (as-built model), or (3) a time period when a statement holds.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://w3id.org/digitalconstruction/Entities#IdentifiableEntity">identifiable entity</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#dependsOn"
+               title="http://w3id.org/digitalconstruction/Contexts#dependsOn">depends on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasContent"
+               title="http://w3id.org/digitalconstruction/Contexts#hasContent">has content</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDependent"
+               title="http://w3id.org/digitalconstruction/Contexts#hasDependent">has dependent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isContextOf"
+               title="http://w3id.org/digitalconstruction/Contexts#isContextOf">is context of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#nextContext"
+               title="http://w3id.org/digitalconstruction/Contexts#nextContext">next context</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#previousContext"
+               title="http://w3id.org/digitalconstruction/Contexts#previousContext">previous context</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#dependsOn"
+               title="http://w3id.org/digitalconstruction/Contexts#dependsOn">depends on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasContext"
+               title="http://w3id.org/digitalconstruction/Contexts#hasContext">has context</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasDependent"
+               title="http://w3id.org/digitalconstruction/Contexts#hasDependent">has dependent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#nextContext"
+               title="http://w3id.org/digitalconstruction/Contexts#nextContext">next context</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#previousContext"
+               title="http://w3id.org/digitalconstruction/Contexts#previousContext">previous context</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ContextFramework">
+      <h3>context framework<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#ContextFramework</p>
+      <div class="comment">
+         <span class="markdown">Context framework is an identified collection of contexts that belong together. Examples are (1) a framework of design contexts consisting of as-is, as-designed, and as-built contexts, (2) a framework of management contexts consisting of contexts for planned and actual execution, and (3) a framework for levels of detail such as BIMForum2018 LOD model.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://w3id.org/digitalconstruction/Entities#IdentifiableEntity">identifiable entity</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasContext"
+               title="http://w3id.org/digitalconstruction/Contexts#hasContext">has context</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isContextOf"
+               title="http://w3id.org/digitalconstruction/Contexts#isContextOf">is context of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UnitAssignment">
+      <h3>unit assignment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#UnitAssignment</p>
+      <div class="comment">
+         <span class="markdown">Specifies what units and quantity kinds are used for a specified property in the content graph. </span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://w3id.org/digitalconstruction/Entities#IdentifiableEntity">identifiable entity</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasPropertyWithUnit"
+               title="http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit">has property with unit</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasQuantityKind"
+               title="http://w3id.org/digitalconstruction/Contexts#hasQuantityKind">has quantity kind</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasUnit"
+               title="http://w3id.org/digitalconstruction/Contexts#hasUnit">has unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasUnitAssignment"
+               title="http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">has unit assignment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UnitFramework">
+      <h3>unit framework<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#UnitFramework</p>
+      <div class="comment">
+         <span class="markdown">A collection of Specifies what units and quantity kinds are used for a specified property in the content graph</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://w3id.org/digitalconstruction/Entities#IdentifiableEntity">identifiable entity</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasUnitAssignment"
+               title="http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">has unit assignment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#dependsOn"
+            title="http://w3id.org/digitalconstruction/Contexts#dependsOn">
+            <span>depends on</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasContext"
+            title="http://w3id.org/digitalconstruction/Contexts#hasContext">
+            <span>has context</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasDependent"
+            title="http://w3id.org/digitalconstruction/Contexts#hasDependent">
+            <span>has dependent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasPropertyWithUnit"
+            title="http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit">
+            <span>has property with unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasQuantityKind"
+            title="http://w3id.org/digitalconstruction/Contexts#hasQuantityKind">
+            <span>has quantity kind</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasUnit"
+            title="http://w3id.org/digitalconstruction/Contexts#hasUnit">
+            <span>has unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasUnitAssignment"
+            title="http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">
+            <span>has unit assignment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isContextOf"
+            title="http://w3id.org/digitalconstruction/Contexts#isContextOf">
+            <span>is context of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nextContext"
+            title="http://w3id.org/digitalconstruction/Contexts#nextContext">
+            <span>next context</span>
+         </a>
+      </li>
+      <li>
+         <a href="#previousContext"
+            title="http://w3id.org/digitalconstruction/Contexts#previousContext">
+            <span>previous context</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="dependsOn">
+      <h3>depends on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#dependsOn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasDependent"
+                  title="http://w3id.org/digitalconstruction/Contexts#hasDependent">has dependent</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasContext">
+      <h3>has context<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasContext</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ContextFramework"
+                  title="http://w3id.org/digitalconstruction/Contexts#ContextFramework">context framework</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isContextOf"
+                  title="http://w3id.org/digitalconstruction/Contexts#isContextOf">is context of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDependent">
+      <h3>has dependent<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasDependent</p>
+      <div class="comment">
+         <span class="markdown">Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#dependsOn"
+                  title="http://w3id.org/digitalconstruction/Contexts#dependsOn">depends on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPropertyWithUnit">
+      <h3>has property with unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#UnitAssignment"
+                  title="http://w3id.org/digitalconstruction/Contexts#UnitAssignment">unit assignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasQuantityKind">
+      <h3>has quantity kind<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasQuantityKind</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#UnitAssignment"
+                  title="http://w3id.org/digitalconstruction/Contexts#UnitAssignment">unit assignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasUnit">
+      <h3>has unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasUnit</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#UnitAssignment"
+                  title="http://w3id.org/digitalconstruction/Contexts#UnitAssignment">unit assignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasUnitAssignment">
+      <h3>has unit assignment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#UnitFramework"
+                  title="http://w3id.org/digitalconstruction/Contexts#UnitFramework">unit framework</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#UnitAssignment"
+                  title="http://w3id.org/digitalconstruction/Contexts#UnitAssignment">unit assignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isContextOf">
+      <h3>is context of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#isContextOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ContextFramework"
+                  title="http://w3id.org/digitalconstruction/Contexts#ContextFramework">context framework</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasContext"
+                  title="http://w3id.org/digitalconstruction/Contexts#hasContext">has context</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nextContext">
+      <h3>next context<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#nextContext</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#previousContext"
+                  title="http://w3id.org/digitalconstruction/Contexts#previousContext">previous context</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="previousContext">
+      <h3>previous context<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#previousContext</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#nextContext"
+                  title="http://w3id.org/digitalconstruction/Contexts#nextContext">next context</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasContent"
+            title="http://w3id.org/digitalconstruction/Contexts#hasContent">
+            <span>has content</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="hasContent">
+      <h3>has content<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/digitalconstruction/Contexts#hasContent</p>
+      <div class="comment">
+         <span class="markdown">Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Context"
+                  title="http://w3id.org/digitalconstruction/Contexts#Context">context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
