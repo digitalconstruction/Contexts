@@ -1,172 +1,98 @@
-<h2 id="overv" class="list">Context ontology for digital construction: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-
-<p> The central concepts of the context ontology are ContextFramework and Context, as shown in the following figure.
-</p>
-
-<center>
-<img src="sections/context-model.png" alt="Context model" height="300">
-</center>
-
-<p>
-The representation of provenance metadata associated to graphs is based on the relations of the PROV-O ontology (Lebo, 2013). 
-</p>
-
-<p>
-Context ontology has the following classes and properties.
-</p>
-
+<h2 id="overv" class="list">Digital construction - Contexts: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul class="hlist">
    <li>
-      <a href="#ContentGraph"
-         title="http://w3id.org/digitalconstruction/Contexts#ContentGraph">
-         <span>content graph</span>
-      </a>
-   </li>
-   <li>
       <a href="#Context"
-         title="http://w3id.org/digitalconstruction/Contexts#Context">
+         title="https://w3id.org/digitalconstruction/Contexts#Context">
          <span>context</span>
       </a>
    </li>
    <li>
       <a href="#ContextFramework"
-         title="http://w3id.org/digitalconstruction/Contexts#ContextFramework">
+         title="https://w3id.org/digitalconstruction/Contexts#ContextFramework">
          <span>context framework</span>
       </a>
    </li>
    <li>
       <a href="#UnitAssignment"
-         title="http://w3id.org/digitalconstruction/Contexts#UnitAssignment">
+         title="https://w3id.org/digitalconstruction/Contexts#UnitAssignment">
          <span>unit assignment</span>
       </a>
    </li>
    <li>
       <a href="#UnitFramework"
-         title="http://w3id.org/digitalconstruction/Contexts#UnitFramework">
+         title="https://w3id.org/digitalconstruction/Contexts#UnitFramework">
          <span>unit framework</span>
       </a>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
       <a href="#dependsOn"
-         title="http://w3id.org/digitalconstruction/Contexts#dependsOn">
+         title="https://w3id.org/digitalconstruction/Contexts#dependsOn">
          <span>depends on</span>
       </a>
    </li>
    <li>
-      <a href="#hasContent"
-         title="http://w3id.org/digitalconstruction/Contexts#hasContent">
-         <span>has content</span>
-      </a>
-   </li>
-   <li>
       <a href="#hasContext"
-         title="http://w3id.org/digitalconstruction/Contexts#hasContext">
+         title="https://w3id.org/digitalconstruction/Contexts#hasContext">
          <span>has context</span>
       </a>
    </li>
    <li>
       <a href="#hasDependent"
-         title="http://w3id.org/digitalconstruction/Contexts#hasDependent">
+         title="https://w3id.org/digitalconstruction/Contexts#hasDependent">
          <span>has dependent</span>
       </a>
    </li>
    <li>
       <a href="#hasPropertyWithUnit"
-         title="http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit">
+         title="https://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit">
          <span>has property with unit</span>
       </a>
    </li>
    <li>
       <a href="#hasQuantityKind"
-         title="http://w3id.org/digitalconstruction/Contexts#hasQuantityKind">
+         title="https://w3id.org/digitalconstruction/Contexts#hasQuantityKind">
          <span>has quantity kind</span>
       </a>
    </li>
    <li>
       <a href="#hasUnit"
-         title="http://w3id.org/digitalconstruction/Contexts#hasUnit">
+         title="https://w3id.org/digitalconstruction/Contexts#hasUnit">
          <span>has unit</span>
       </a>
    </li>
    <li>
       <a href="#hasUnitAssignment"
-         title="http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">
+         title="https://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">
          <span>has unit assignment</span>
       </a>
    </li>
    <li>
-      <a href="#isContentOf"
-         title="http://w3id.org/digitalconstruction/Contexts#isContentOf">
-         <span>is content of</span>
-      </a>
-   </li>
-   <li>
       <a href="#isContextOf"
-         title="http://w3id.org/digitalconstruction/Contexts#isContextOf">
+         title="https://w3id.org/digitalconstruction/Contexts#isContextOf">
          <span>is context of</span>
       </a>
    </li>
    <li>
       <a href="#nextContext"
-         title="http://w3id.org/digitalconstruction/Contexts#nextContext">
+         title="https://w3id.org/digitalconstruction/Contexts#nextContext">
          <span>next context</span>
       </a>
    </li>
    <li>
       <a href="#previousContext"
-         title="http://w3id.org/digitalconstruction/Contexts#previousContext">
+         title="https://w3id.org/digitalconstruction/Contexts#previousContext">
          <span>previous context</span>
       </a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
-      <a href="#hasNamedGraph"
-         title="http://w3id.org/digitalconstruction/Contexts#hasNamedGraph">
-         <span>has named graph</span>
-      </a>
-   </li>
-</ul><h4>Annotation Properties</h4><ul class="hlist">
-   <li>
-      <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
-         <span>abstract</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
-         <span>created</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/elements/1.1/date" title="http://purl.org/dc/elements/1.1/date">
-         <span>date</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
-         <span>description</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
-         <span>license</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
-         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
-         <span>preferred namespace prefix</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
-         <span>preferred namespace uri</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
-         <span>title</span>
+      <a href="#hasContent"
+         title="https://w3id.org/digitalconstruction/Contexts#hasContent">
+         <span>has content</span>
       </a>
    </li>
 </ul>

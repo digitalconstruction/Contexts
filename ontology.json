@@ -1,4 +1,7 @@
 [ {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/date",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -23,7 +26,7 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Seppo Törmä (seppo.torma@visualynk.com)"
@@ -31,7 +34,7 @@
     "@value" : "Yuan Zheng (yuan.zheng@aalto.fi)"
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2019-12-20"
+    "@value" : "2020-03-02"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@value" : "Digital construction - Contexts"
@@ -49,7 +52,7 @@
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "ctx"
+    "@value" : "dicc"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@value" : "https://w3id.org/digitalconstruction/Contexts"
@@ -59,152 +62,137 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://w3id.org/digitalconstruction"
-  } ],
-  "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Entities#"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#Context",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#Context",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An identified realm of data, representing the circumstances in which the data can be considered true. Examples are (1) intentional contexts such as a requirement definition, a plan or a design, (2) actual contexts such as actual activity execution or a model of constructed building (as-built model), or (3) a time period when a statement holds."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#ContextFramework",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#ContextFramework",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Context framework is an identified collection of contexts that belong together. Examples are (1) a framework of design contexts consisting of as-is, as-designed, and as-built contexts, (2) a framework of management contexts consisting of contexts for planned and actual execution, and (3) a framework for levels of detail such as BIMForum2018 LOD model."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Specifies what units and quantity kinds are used for a specified property in the content graph. "
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitFramework",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitFramework",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A collection of Specifies what units and quantity kinds are used for a specified property in the content graph"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/digitalconstruction/Entities#IdentifiableEntity"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#dependsOn",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#dependsOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#hasDependent"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#hasDependent"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasContent",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#hasContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasContext",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#hasContext",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContextFramework"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#ContextFramework"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#isContextOf"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#isContextOf"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasDependent",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#hasDependent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitAssignment"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasQuantityKind",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#hasQuantityKind",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitAssignment"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasUnit",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#hasUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitAssignment"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#hasUnitAssignment",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#hasUnitAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitFramework"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitFramework"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitAssignment"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#isContentOf",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#isContentOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#isContextOf",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#isContextOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#ContextFramework"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#ContextFramework"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#nextContext",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#nextContext",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#previousContext"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#previousContext"
   } ]
 }, {
-  "@id" : "http://w3id.org/digitalconstruction/Contexts#previousContext",
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#previousContext",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/digitalconstruction/Contexts#Context"
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
   } ]
 } ]
