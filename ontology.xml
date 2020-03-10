@@ -261,6 +261,7 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Contexts#Context">
         <rdfs:comment>An identified realm of data, representing the circumstances in which the data can be considered true. Examples are (1) intentional contexts such as a requirement definition, a plan or a design, (2) actual contexts such as actual activity execution or a model of constructed building (as-built model), or (3) a time period when a statement holds.</rdfs:comment>
+        <rdfs:label>Context</rdfs:label>
     </owl:Class>
     
 
@@ -270,6 +271,7 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Contexts#ContextFramework">
         <rdfs:comment>Context framework is an identified collection of contexts that belong together. Examples are (1) a framework of design contexts consisting of as-is, as-designed, and as-built contexts, (2) a framework of management contexts consisting of contexts for planned and actual execution, and (3) a framework for levels of detail such as BIMForum2018 LOD model.</rdfs:comment>
+        <rdfs:label>ContextFramework</rdfs:label>
     </owl:Class>
     
 
@@ -279,6 +281,7 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Contexts#UnitAssignment">
         <rdfs:comment>Specifies what units and quantity kinds are used for a specified property in the content graph. </rdfs:comment>
+        <rdfs:label>UnitAssignment</rdfs:label>
     </owl:Class>
     
 
@@ -288,6 +291,7 @@
 
     <owl:Class rdf:about="https://w3id.org/digitalconstruction/Contexts#UnitFramework">
         <rdfs:comment>A collection of Specifies what units and quantity kinds are used for a specified property in the content graph</rdfs:comment>
+        <rdfs:label>UnitFramework</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
