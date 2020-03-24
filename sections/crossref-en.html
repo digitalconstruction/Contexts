@@ -1,5 +1,5 @@
-<h2 id="crossreference" class="list">Cross reference for Digital construction - Contexts classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by Digital construction - Contexts.
+<h2 id="crossreference" class="list">Cross reference for Digital Construction Contexts classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Digital Construction Contexts.
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
@@ -10,6 +10,10 @@ This section provides details for each class and property defined by Digital con
       <li>
          <a href="#ContextFramework"
             title="https://w3id.org/digitalconstruction/Contexts#ContextFramework">ContextFramework</a>
+      </li>
+      <li>
+         <a href="#ContextSet"
+            title="https://w3id.org/digitalconstruction/Contexts#ContextSet">ContextSet</a>
       </li>
       <li>
          <a href="#UnitAssignment"
@@ -39,6 +43,8 @@ This section provides details for each class and property defined by Digital con
                title="https://w3id.org/digitalconstruction/Contexts#hasContent">has content</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDependent"
                title="https://w3id.org/digitalconstruction/Contexts#hasDependent">has dependent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isActiveInSet"
+               title="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">is active in set</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isContextOf"
                title="https://w3id.org/digitalconstruction/Contexts#isContextOf">is context of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#nextContext"
@@ -51,6 +57,8 @@ This section provides details for each class and property defined by Digital con
          <dd>
             <a href="#dependsOn"
                title="https://w3id.org/digitalconstruction/Contexts#dependsOn">depends on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasActiveContext"
+               title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">has active context</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasContext"
                title="https://w3id.org/digitalconstruction/Contexts#hasContext">has context</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasDependent"
@@ -84,6 +92,31 @@ This section provides details for each class and property defined by Digital con
          <dd>
             <a href="#isContextOf"
                title="https://w3id.org/digitalconstruction/Contexts#isContextOf">is context of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ContextSet">
+      <h3>ContextSet<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Contexts#ContextSet</p>
+      <div class="comment">
+         <span class="markdown">A set of active contexts. It can include a compatible set of contexts for design information (e.g., LOD400 BIM models), organizational structures (e.g., location breakdown structure), a currenty valid master plan, compatible lookahead plan, the week plan for current week, and a context for actual execution data.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasActiveContext"
+               title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">has active context</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isActiveInSet"
+               title="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">is active in set</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -146,6 +179,12 @@ This section provides details for each class and property defined by Digital con
          </a>
       </li>
       <li>
+         <a href="#hasActiveContext"
+            title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">
+            <span>has active context</span>
+         </a>
+      </li>
+      <li>
          <a href="#hasContext"
             title="https://w3id.org/digitalconstruction/Contexts#hasContext">
             <span>has context</span>
@@ -179,6 +218,12 @@ This section provides details for each class and property defined by Digital con
          <a href="#hasUnitAssignment"
             title="https://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">
             <span>has unit assignment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isActiveInSet"
+            title="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">
+            <span>is active in set</span>
          </a>
       </li>
       <li>
@@ -225,6 +270,36 @@ This section provides details for each class and property defined by Digital con
             <dd>
                <a href="#hasDependent"
                   title="https://w3id.org/digitalconstruction/Contexts#hasDependent">has dependent</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasActiveContext">
+      <h3>has active context<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Contexts#hasActiveContext</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ContextSet"
+                  title="https://w3id.org/digitalconstruction/Contexts#ContextSet">ContextSet</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="https://w3id.org/digitalconstruction/Contexts#Context">Context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isActiveInSet"
+                  title="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">is active in set</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -367,6 +442,36 @@ This section provides details for each class and property defined by Digital con
                <a href="#UnitAssignment"
                   title="https://w3id.org/digitalconstruction/Contexts#UnitAssignment">UnitAssignment</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isActiveInSet">
+      <h3>is active in set<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Contexts#isActiveInSet</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Context"
+                  title="https://w3id.org/digitalconstruction/Contexts#Context">Context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ContextSet"
+                  title="https://w3id.org/digitalconstruction/Contexts#ContextSet">ContextSet</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasActiveContext"
+                  title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">has active context</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>

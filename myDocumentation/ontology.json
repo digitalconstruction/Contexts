@@ -29,15 +29,15 @@
   "@id" : "https://w3id.org/digitalconstruction/Contexts",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Seppo Törmä (seppo.torma@visualynk.com)"
+    "@value" : "Seppo Törmä"
   }, {
-    "@value" : "Yuan Zheng (yuan.zheng@aalto.fi)"
+    "@value" : "Yuan Zheng"
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2020-03-02"
+    "@value" : "2020-03-20"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
-    "@value" : "Digital construction - Contexts"
+    "@value" : "Digital Construction Contexts"
   } ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@value" : "Context ontology provides the basic representation mechanisms for multi-context information present in all contruction and renovation projects, including planned and actual values, as-designed and as-built models, and different levels of detail/development. The ontology allows the definition of different context frameworks, to create contexts withing the frameworks, and associating content to contexts. At the implementation level, the content is stored in different named graphs of an RDF Dataset and the representation of context frameworks anbd contexts are managed in the default graph of the RDF Dataset."
@@ -58,7 +58,7 @@
     "@value" : "https://w3id.org/digitalconstruction/Contexts"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Digital construction - Contexts"
+    "@value" : "Digital Construction Contexts"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://w3id.org/digitalconstruction"
@@ -80,6 +80,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ContextFramework"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#ContextSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A set of active contexts. It can include a compatible set of contexts for design information (e.g., LOD400 BIM models), organizational structures (e.g., location breakdown structure), a currenty valid master plan, compatible lookahead plan, the week plan for current week, and a context for actual execution data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ContextSet"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitAssignment",
@@ -110,6 +119,18 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Contexts#hasDependent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#hasActiveContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#ContextSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#isActiveInSet"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Contexts#hasContent",
@@ -173,6 +194,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Contexts#UnitAssignment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/Contexts#isActiveInSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/Contexts#ContextSet"
   } ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Contexts#isContentOf",
