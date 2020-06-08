@@ -120,6 +120,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/Contexts#hasDependent"/>
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:label>dependsOn</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -131,6 +132,8 @@
         <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/Contexts#isActiveInSet"/>
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#ContextSet"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:comment>A context that is active in the ContextSet</rdfs:comment>
+        <rdfs:label>hasActiveContext</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -142,6 +145,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/Contexts#isContextOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#ContextFramework"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:label>hasContext</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -153,6 +157,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:comment>Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design.</rdfs:comment>
+        <rdfs:label>hasDependent</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -162,6 +167,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#UnitAssignment"/>
+        <rdfs:label>hasPropertyWithUnit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -171,6 +177,19 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#hasQuantityKind">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#UnitAssignment"/>
+        <rdfs:label>hasQuantityKind</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/Contexts#hasSubContext -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#hasSubContext">
+        <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/Contexts#isSubContextOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:label>hasSubContext</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -180,6 +199,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#hasUnit">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#UnitAssignment"/>
+        <rdfs:label>hasUnit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -190,6 +210,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#UnitFramework"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#UnitAssignment"/>
+        <rdfs:label>hasUnitAssignment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -200,6 +221,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#ContextSet"/>
+        <rdfs:label>isActiveInSet</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -210,6 +232,18 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#isContextOf">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#ContextFramework"/>
+        <rdfs:label>isContextOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/Contexts#isSubContextOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#isSubContextOf">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:label>isSubContextOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -221,6 +255,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/digitalconstruction/Contexts#previousContext"/>
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:label>nextContext</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -231,6 +266,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#previousContext">
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
+        <rdfs:label>previousContext</rdfs:label>
     </owl:ObjectProperty>
     
 
