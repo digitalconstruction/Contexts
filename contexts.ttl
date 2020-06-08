@@ -69,74 +69,102 @@
 :dependsOn rdf:type owl:ObjectProperty ;
            owl:inverseOf :hasDependent ;
            rdfs:domain :Context ;
-           rdfs:range :Context .
+           rdfs:range :Context ;
+           rdfs:label "dependsOn" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#hasActiveContext
 :hasActiveContext rdf:type owl:ObjectProperty ;
                   owl:inverseOf :isActiveInSet ;
                   rdfs:domain :ContextSet ;
-                  rdfs:range :Context .
+                  rdfs:range :Context ;
+                  rdfs:comment "A context that is active in the ContextSet" ;
+                  rdfs:label "hasActiveContext" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#hasContext
 :hasContext rdf:type owl:ObjectProperty ;
             owl:inverseOf :isContextOf ;
             rdfs:domain :ContextFramework ;
-            rdfs:range :Context .
+            rdfs:range :Context ;
+            rdfs:label "hasContext" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#hasDependent
 :hasDependent rdf:type owl:ObjectProperty ;
               rdfs:domain :Context ;
               rdfs:range :Context ;
-              rdfs:comment "Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design." .
+              rdfs:comment "Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design." ;
+              rdfs:label "hasDependent" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit
 :hasPropertyWithUnit rdf:type owl:ObjectProperty ;
-                     rdfs:domain :UnitAssignment .
+                     rdfs:domain :UnitAssignment ;
+                     rdfs:label "hasPropertyWithUnit" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#hasQuantityKind
 :hasQuantityKind rdf:type owl:ObjectProperty ;
-                 rdfs:domain :UnitAssignment .
+                 rdfs:domain :UnitAssignment ;
+                 rdfs:label "hasQuantityKind" .
+
+
+###  https://w3id.org/digitalconstruction/Contexts#hasSubContext
+:hasSubContext rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isSubContextOf ;
+               rdfs:domain :Context ;
+               rdfs:range :Context ;
+               rdfs:label "hasSubContext" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#hasUnit
 :hasUnit rdf:type owl:ObjectProperty ;
-         rdfs:domain :UnitAssignment .
+         rdfs:domain :UnitAssignment ;
+         rdfs:label "hasUnit" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#hasUnitAssignment
 :hasUnitAssignment rdf:type owl:ObjectProperty ;
                    rdfs:domain :UnitFramework ;
-                   rdfs:range :UnitAssignment .
+                   rdfs:range :UnitAssignment ;
+                   rdfs:label "hasUnitAssignment" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#isActiveInSet
 :isActiveInSet rdf:type owl:ObjectProperty ;
                rdfs:domain :Context ;
-               rdfs:range :ContextSet .
+               rdfs:range :ContextSet ;
+               rdfs:label "isActiveInSet" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#isContextOf
 :isContextOf rdf:type owl:ObjectProperty ;
              rdfs:domain :Context ;
-             rdfs:range :ContextFramework .
+             rdfs:range :ContextFramework ;
+             rdfs:label "isContextOf" .
+
+
+###  https://w3id.org/digitalconstruction/Contexts#isSubContextOf
+:isSubContextOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :Context ;
+                rdfs:range :Context ;
+                rdfs:label "isSubContextOf" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#nextContext
 :nextContext rdf:type owl:ObjectProperty ;
              owl:inverseOf :previousContext ;
              rdfs:domain :Context ;
-             rdfs:range :Context .
+             rdfs:range :Context ;
+             rdfs:label "nextContext" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#previousContext
 :previousContext rdf:type owl:ObjectProperty ;
                  rdfs:domain :Context ;
-                 rdfs:range :Context .
+                 rdfs:range :Context ;
+                 rdfs:label "previousContext" .
 
 
 #################################################################
