@@ -146,6 +146,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs."
+  }, {
+    "@value" : "hasContent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Contexts#Context"
@@ -267,9 +269,6 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/digitalconstruction/Contexts#ContextSet"
   } ]
-}, {
-  "@id" : "https://w3id.org/digitalconstruction/Contexts#isContentOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "https://w3id.org/digitalconstruction/Contexts#isContextOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],

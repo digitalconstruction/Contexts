@@ -314,14 +314,8 @@
         <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/Contexts#Context"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs.</rdfs:comment>
+        <rdfs:comment>hasContent</rdfs:comment>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/digitalconstruction/Contexts#isContentOf -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/Contexts#isContentOf"/>
     
 
 
