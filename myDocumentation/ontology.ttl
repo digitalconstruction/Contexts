@@ -130,6 +130,15 @@
                    rdfs:label "hasUnitAssignment" .
 
 
+###  https://w3id.org/digitalconstruction/Contexts#hasUnitFramework
+:hasUnitFramework rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :isUnitFrameworkOf ;
+                  rdfs:domain :Context ;
+                  rdfs:range :UnitFramework ;
+                  rdfs:comment "Relation of a Context to a UnitFramework" ;
+                  rdfs:label "hasUnitFramework" .
+
+
 ###  https://w3id.org/digitalconstruction/Contexts#isActiveInSet
 :isActiveInSet rdf:type owl:ObjectProperty ;
                rdfs:domain :Context ;
@@ -149,6 +158,13 @@
                 rdfs:domain :Context ;
                 rdfs:range :Context ;
                 rdfs:label "isSubContextOf" .
+
+
+###  https://w3id.org/digitalconstruction/Contexts#isUnitFrameworkOf
+:isUnitFrameworkOf rdf:type owl:ObjectProperty ;
+                   rdfs:domain :UnitFramework ;
+                   rdfs:range :Context ;
+                   rdfs:label "isUnitFrameworkOf" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#nextContext
@@ -199,7 +215,7 @@
 
 ###  https://w3id.org/digitalconstruction/Contexts#ContextSet
 :ContextSet rdf:type owl:Class ;
-            rdfs:comment "A set of active contexts. It can include a compatible set of contexts for design information (e.g., LOD400 BIM models), organizational structures (e.g., location breakdown structure), a currenty valid master plan, compatible lookahead plan, the week plan for current week, and a context for actual execution data." ;
+            rdfs:comment "A set of active contexts. It can include a compatible set of contexts for design information (e.g., LOD400 BIM models), organizational structures (e.g., location breakdown structure), a currenty valid master plan, compatible lookahead plan, the week plan for current week, and a context for actual execution data. The can be a unique \"current ContexSet\" and there can be ContextSet for different periods of time or for different renovation scenarios." ;
             rdfs:label "ContextSet" .
 
 

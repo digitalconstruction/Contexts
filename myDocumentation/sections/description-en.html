@@ -6,22 +6,22 @@ In the following the basic patterns to work with graph-based metadata are shown 
 
 <pre>
 # Create a context framework :ActivityContexts:
-INSERT {:ActivityContexts a ctx:ContextFramework}
+INSERT {:ActivityContexts a dicc:ContextFramework}
 
-# Create two contexts :Planned and :Actual to the framework :ActivityContexts, with a ctx:previousContext relation between them:
-INSERT  { :Planned a ctx:Context; ctx:isContextOf :ActivityContexts .}
-INSERT  { :Actual a ctx:Context; ctx:isContextOf :ActivityContexts .}
-INSERT  { :Actual ctx:previousContext :Planned .}
+# Create two contexts :Planned and :Actual to the framework :ActivityContexts, with a dicc:previousContext relation between them:
+INSERT  { :Planned a dicc:Context; dicc:isContextOf :ActivityContexts .}
+INSERT  { :Actual a dicc:Context; dicc:isContextOf :ActivityContexts .}
+INSERT  { :Actual dicc:previousContext :Planned .}
 
 # Create a context framework for designs with the id :DesignContexts:
-INSERT {:DesignContexts a ctx:ContextFramework ; ctx:hasLabel “BIMForum”}
+INSERT {:DesignContexts a dicc:ContextFramework ; dicc:hasLabel “BIMForum”}
 
-# Create LOD contexts :LOD100, :LOD200, :LOD300 to the framework :DesignContexts, with a ctx:previousContext relation between them:
-INSERT  { :LOD100 a ctx:Context; ctx:isContextOf :DesignContexts .}
-INSERT  { :LOD200 a ctx:Context; ctx:isContextOf :DesignContexts .}
-INSERT  { :LOD300 a ctx:Context; ctx:isContextOf :DesignContexts .}
-INSERT  { :LOD300 ctx:previousContext :LOD200 .}
-INSERT  { :LOD200 ctx:previousContext :LOD100 .}
+# Create LOD contexts :LOD100, :LOD200, :LOD300 to the framework :DesignContexts, with a dicc:previousContext relation between them:
+INSERT  { :LOD100 a dicc:Context; dicc:isContextOf :DesignContexts .}
+INSERT  { :LOD200 a dicc:Context; dicc:isContextOf :DesignContexts .}
+INSERT  { :LOD300 a dicc:Context; dicc:isContextOf :DesignContexts .}
+INSERT  { :LOD300 dicc:previousContext :LOD200 .}
+INSERT  { :LOD200 dicc:previousContext :LOD100 .}
 </pre>
 
 <h3>Inserting data</h3>
@@ -30,35 +30,35 @@ INSERT  { :LOD200 ctx:previousContext :LOD100 .}
 # Load a plan from a URL <file:/data/plan1.ttl> to a :Planned context from source URI:
 LOAD <file:/data/plan1.ttl> INTO GRAPH :PlanGraph1
 INSERT {
-   :Planned ctx:hasContent :PlanGraph1 . 
+   :Planned dicc:hasContent :PlanGraph1 . 
    :Planned prov:wasDerivedFrom <file:/data/plan1.ttl>}
 
 # Update actual data :Actual context:
-WITH { :Actual ctx:hasContent ?graph}
+WITH { :Actual dicc:hasContent ?graph}
 INSERT INTO GRAPH ?graph {
    :Object1 :property1 100 }
 
 # Load data to :LOD contexts:
 LOAD <file:/data/BIM-LOD100.ttl> INTO GRAPH :LOD100Graph
 INSERT {
-   :LOD100 ctx:hasContent :LOD100Graph. 
+   :LOD100 dicc:hasContent :LOD100Graph. 
    :LOD100 prov:wasDerivedFrom <file:/data/BIM-LOD100.ttl>}
  
 # LOAD <file:/data/BIM-LOD100.ttl> INTO GRAPH :LOD200Graph
 INSERT {
-   :LOD200 ctx:hasContent :LOD300Graph. 
+   :LOD200 dicc:hasContent :LOD300Graph. 
    :LOD200 prov:wasDerivedFrom <file:/data/BIM-LOD200.ttl>}
 
 # LOAD <file:/data/BIM-LOD200.ttl> INTO GRAPH :LOD300Graph
 INSERT {
-   :Planned ctx:hasContent :LOD300Graph. 
+   :Planned dicc:hasContent :LOD300Graph. 
    :Planned prov:wasDerivedFrom <file:/data/BIM-LOD200.ttl>}
 
 # Correct a mistake: clear the graph and reload the correct file:
 CLEAR GRAPH :LOD300Graph .
 LOAD <file:/data/BIM-LOD300.ttl> INTO GRAPH :LOD300Graph
 INSERT {
-   :Planned ctx:hasContent :LOD300Graph. 
+   :Planned dicc:hasContent :LOD300Graph. 
    :Planned prov:wasDerivedFrom <file:/data/BIM-LOD300.ttl>}
 </pre>
 
@@ -68,21 +68,21 @@ INSERT {
 # Query the property :property1 of object :Object1 in the context :Planned
 SELECT ?value 
 WHERE { 
-   :Planned ctx:hasContent ?graph .
+   :Planned dicc:hasContent ?graph .
    GRAPH ?graph {:Object1 :property1 ?value}}
 
 # Query which contexts data about the :property1 of :Object1
 SELECT ?context ?value
 WHERE {
-   ?context ctx:hasContent ?graph .
+   ?context dicc:hasContent ?graph .
    GRAPH ?graph {:Object1 :property1 ?value}}
 
 # Query the objects and properties whose value has changed from one context to the next: 
 SELECT ?object ?property ?context1 ?value ?context2 ?value2
 WHERE {
-   ?context2 ctx:hasPreviousContext ?context1 .
-   ?context1 ctx:hasContent ?graph1 .
-   ?context2 ctx:hasContent ?graph2 .
+   ?context2 dicc:hasPreviousContext ?context1 .
+   ?context1 dicc:hasContent ?graph1 .
+   ?context2 dicc:hasContent ?graph2 .
    GRAPH ?graph1 {?object ?property ?value1}}
    GRAPH ?graph2 {?object ?property ?value2}}
    FILTER (?value1 != ?value2) }
@@ -91,19 +91,19 @@ WHERE {
 <h3>Change management</h3>
 <pre>
 # BIM-LOD300.ttl needs to be changed. Create a new context :LOD300R2 and load a new file <file:/data/BIM-LOD300R2.ttl> there:
-INSERT  { :LOD300R2 a ctx:Context; 
-               ctx:isContextOf :DesignContexts;
-               ctx:previousContext :LOD300 .}
+INSERT  { :LOD300R2 a dicc:Context; 
+               dicc:isContextOf :DesignContexts;
+               dicc:previousContext :LOD300 .}
 LOAD <file:/data/BIM-LOD300R2.ttl> INTO GRAPH :LOD300R2Graph
 INSERT {
-   :LOD300R2Graph ctx:hasContent :LOD300R2Graph. 
+   :LOD300R2Graph dicc:hasContent :LOD300R2Graph. 
    :LOD300R2Graph prov:wasDerivedFrom <file:/data/BIM-LOD300R2.ttl>}
 
 # Query the objects and properties whose value has changed from :LOD300 to :LOD300R2: 
 SELECT ?object ?property ?value ?value2
 WHERE {.
-   :LOD300   ctx:hasContent ?graph1 .
-   :LOD300R2 ctx:hasContent ?graph2 .
+   :LOD300   dicc:hasContent ?graph1 .
+   :LOD300R2 dicc:hasContent ?graph2 .
    GRAPH ?graph1 {?object ?property ?value1}}
    GRAPH ?graph2 {?object ?property ?value2}}
    FILTER (?value1 != ?value2) }

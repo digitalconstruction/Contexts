@@ -45,6 +45,8 @@ This section provides details for each class and property defined by Digital Con
                title="https://w3id.org/digitalconstruction/Contexts#hasDependent">hasDependent</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSubContext"
                title="https://w3id.org/digitalconstruction/Contexts#hasSubContext">hasSubContext</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasUnitFramework"
+               title="https://w3id.org/digitalconstruction/Contexts#hasUnitFramework">hasUnitFramework</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isActiveInSet"
                title="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">isActiveInSet</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isContextOf"
@@ -71,6 +73,8 @@ This section provides details for each class and property defined by Digital Con
                title="https://w3id.org/digitalconstruction/Contexts#hasSubContext">hasSubContext</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isSubContextOf"
                title="https://w3id.org/digitalconstruction/Contexts#isSubContextOf">isSubContextOf</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUnitFrameworkOf"
+               title="https://w3id.org/digitalconstruction/Contexts#isUnitFrameworkOf">isUnitFrameworkOf</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#nextContext"
                title="https://w3id.org/digitalconstruction/Contexts#nextContext">nextContext</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#previousContext"
@@ -112,7 +116,7 @@ This section provides details for each class and property defined by Digital Con
       <p>
          <strong>IRI:</strong> https://w3id.org/digitalconstruction/Contexts#ContextSet</p>
       <div class="comment">
-         <span class="markdown">A set of active contexts. It can include a compatible set of contexts for design information (e.g., LOD400 BIM models), organizational structures (e.g., location breakdown structure), a currenty valid master plan, compatible lookahead plan, the week plan for current week, and a context for actual execution data.</span>
+         <span class="markdown">A set of active contexts. It can include a compatible set of contexts for design information (e.g., LOD400 BIM models), organizational structures (e.g., location breakdown structure), a currenty valid master plan, compatible lookahead plan, the week plan for current week, and a context for actual execution data. The can be a unique "current ContexSet" and there can be ContextSet for different periods of time or for different renovation scenarios.</span>
       </div>
       <dl class="description">
          <dt>is in domain of</dt>
@@ -173,6 +177,14 @@ This section provides details for each class and property defined by Digital Con
          <dd>
             <a href="#hasUnitAssignment"
                title="https://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">hasUnitAssignment</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUnitFrameworkOf"
+               title="https://w3id.org/digitalconstruction/Contexts#isUnitFrameworkOf">isUnitFrameworkOf</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasUnitFramework"
+               title="https://w3id.org/digitalconstruction/Contexts#hasUnitFramework">hasUnitFramework</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -217,6 +229,10 @@ This section provides details for each class and property defined by Digital Con
             title="https://w3id.org/digitalconstruction/Contexts#hasUnitAssignment">hasUnitAssignment</a>
       </li>
       <li>
+         <a href="#hasUnitFramework"
+            title="https://w3id.org/digitalconstruction/Contexts#hasUnitFramework">hasUnitFramework</a>
+      </li>
+      <li>
          <a href="#isActiveInSet"
             title="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">isActiveInSet</a>
       </li>
@@ -227,6 +243,10 @@ This section provides details for each class and property defined by Digital Con
       <li>
          <a href="#isSubContextOf"
             title="https://w3id.org/digitalconstruction/Contexts#isSubContextOf">isSubContextOf</a>
+      </li>
+      <li>
+         <a href="#isUnitFrameworkOf"
+            title="https://w3id.org/digitalconstruction/Contexts#isUnitFrameworkOf">isUnitFrameworkOf</a>
       </li>
       <li>
          <a href="#nextContext"
@@ -471,6 +491,39 @@ This section provides details for each class and property defined by Digital Con
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasUnitFramework">
+      <h3>hasUnitFramework<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Contexts#hasUnitFramework</p>
+      <div class="comment">
+         <span class="markdown">Relation of a Context to a UnitFramework</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Context"
+                  title="https://w3id.org/digitalconstruction/Contexts#Context">Context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#UnitFramework"
+                  title="https://w3id.org/digitalconstruction/Contexts#UnitFramework">UnitFramework</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isUnitFrameworkOf"
+                  title="https://w3id.org/digitalconstruction/Contexts#isUnitFrameworkOf">isUnitFrameworkOf</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="isActiveInSet">
       <h3>isActiveInSet<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -556,6 +609,36 @@ This section provides details for each class and property defined by Digital Con
             <dd>
                <a href="#hasSubContext"
                   title="https://w3id.org/digitalconstruction/Contexts#hasSubContext">hasSubContext</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isUnitFrameworkOf">
+      <h3>isUnitFrameworkOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Contexts#isUnitFrameworkOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#UnitFramework"
+                  title="https://w3id.org/digitalconstruction/Contexts#UnitFramework">UnitFramework</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="https://w3id.org/digitalconstruction/Contexts#Context">Context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasUnitFramework"
+                  title="https://w3id.org/digitalconstruction/Contexts#hasUnitFramework">hasUnitFramework</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
