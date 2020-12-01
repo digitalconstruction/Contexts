@@ -71,6 +71,14 @@
 <https://w3id.org/digitalconstruction/Contexts#hasActiveContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A context that is active in the ContextSet" .
 <https://w3id.org/digitalconstruction/Contexts#hasActiveContext> <http://www.w3.org/2000/01/rdf-schema#label> "hasActiveContext" .
 # 
+# https://w3id.org/digitalconstruction/Contexts#hasActualContext
+<https://w3id.org/digitalconstruction/Contexts#hasActualContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Contexts#hasActualContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/Contexts#hasActiveContext> .
+<https://w3id.org/digitalconstruction/Contexts#hasActualContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Contexts#ContextSet> .
+<https://w3id.org/digitalconstruction/Contexts#hasActualContext> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Contexts#Context> .
+<https://w3id.org/digitalconstruction/Contexts#hasActualContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A context that contains data about intentions or expectations: plans, designs, simulation results, and so on." .
+<https://w3id.org/digitalconstruction/Contexts#hasActualContext> <http://www.w3.org/2000/01/rdf-schema#label> "hasActualContext" .
+# 
 # https://w3id.org/digitalconstruction/Contexts#hasContext
 <https://w3id.org/digitalconstruction/Contexts#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Contexts#hasContext> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/digitalconstruction/Contexts#isContextOf> .
@@ -85,6 +93,14 @@
 <https://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/2000/01/rdf-schema#comment> "Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design." .
 <https://w3id.org/digitalconstruction/Contexts#hasDependent> <http://www.w3.org/2000/01/rdf-schema#label> "hasDependent" .
 # 
+# https://w3id.org/digitalconstruction/Contexts#hasModalContext
+<https://w3id.org/digitalconstruction/Contexts#hasModalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/digitalconstruction/Contexts#hasModalContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/Contexts#hasActiveContext> .
+<https://w3id.org/digitalconstruction/Contexts#hasModalContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Contexts#ContextSet> .
+<https://w3id.org/digitalconstruction/Contexts#hasModalContext> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/Contexts#Context> .
+<https://w3id.org/digitalconstruction/Contexts#hasModalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A context that contains data about actually happened activities or implemented entities" .
+<https://w3id.org/digitalconstruction/Contexts#hasModalContext> <http://www.w3.org/2000/01/rdf-schema#label> "hasModalContext" .
+# 
 # https://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit
 <https://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Contexts#UnitAssignment> .
@@ -93,6 +109,7 @@
 # https://w3id.org/digitalconstruction/Contexts#hasQuantityKind
 <https://w3id.org/digitalconstruction/Contexts#hasQuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Contexts#hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Contexts#UnitAssignment> .
+<https://w3id.org/digitalconstruction/Contexts#hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityKind> .
 <https://w3id.org/digitalconstruction/Contexts#hasQuantityKind> <http://www.w3.org/2000/01/rdf-schema#label> "hasQuantityKind" .
 # 
 # https://w3id.org/digitalconstruction/Contexts#hasSubContext
@@ -105,6 +122,7 @@
 # https://w3id.org/digitalconstruction/Contexts#hasUnit
 <https://w3id.org/digitalconstruction/Contexts#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/digitalconstruction/Contexts#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Contexts#UnitAssignment> .
+<https://w3id.org/digitalconstruction/Contexts#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
 <https://w3id.org/digitalconstruction/Contexts#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "hasUnit" .
 # 
 # https://w3id.org/digitalconstruction/Contexts#hasUnitAssignment
@@ -172,7 +190,7 @@
 <https://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/Contexts#Context> .
 <https://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Association of a context to the named graph that contains the contents of the context. A context may have multiple content graphs." .
-<https://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#comment> "hasContent" .
+<https://w3id.org/digitalconstruction/Contexts#hasContent> <http://www.w3.org/2000/01/rdf-schema#label> "hasContent" .
 # 
 # 
 # 
@@ -182,6 +200,14 @@
 # #
 # #################################################################
 # 
+# 
+# http://qudt.org/schema/qudt/QuantityKind
+<http://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/2000/01/rdf-schema#label> "qudt:QuantityKind" .
+# 
+# http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "qudt:Unit" .
 # 
 # https://w3id.org/digitalconstruction/Contexts#Context
 <https://w3id.org/digitalconstruction/Contexts#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -208,4 +234,4 @@
 <https://w3id.org/digitalconstruction/Contexts#UnitFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of Specifies what units and quantity kinds are used for a specified property in the content graph" .
 <https://w3id.org/digitalconstruction/Contexts#UnitFramework> <http://www.w3.org/2000/01/rdf-schema#label> "UnitFramework" .
 # 
-# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

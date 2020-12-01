@@ -16,6 +16,12 @@ This section provides details for each class and property defined by Digital Con
             title="https://w3id.org/digitalconstruction/Contexts#ContextSet">ContextSet</a>
       </li>
       <li>
+         <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">qudt:QuantityKind</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">qudt:Unit</a>
+      </li>
+      <li>
          <a href="#UnitAssignment"
             title="https://w3id.org/digitalconstruction/Contexts#UnitAssignment">UnitAssignment</a>
       </li>
@@ -40,7 +46,7 @@ This section provides details for each class and property defined by Digital Con
             <a href="#dependsOn"
                title="https://w3id.org/digitalconstruction/Contexts#dependsOn">dependsOn</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasContent"
-               title="https://w3id.org/digitalconstruction/Contexts#hasContent">has content</a>
+               title="https://w3id.org/digitalconstruction/Contexts#hasContent">hasContent</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDependent"
                title="https://w3id.org/digitalconstruction/Contexts#hasDependent">hasDependent</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSubContext"
@@ -65,10 +71,14 @@ This section provides details for each class and property defined by Digital Con
                title="https://w3id.org/digitalconstruction/Contexts#dependsOn">dependsOn</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasActiveContext"
                title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">hasActiveContext</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasActualContext"
+               title="https://w3id.org/digitalconstruction/Contexts#hasActualContext">hasActualContext</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasContext"
                title="https://w3id.org/digitalconstruction/Contexts#hasContext">hasContext</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasDependent"
                title="https://w3id.org/digitalconstruction/Contexts#hasDependent">hasDependent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasModalContext"
+               title="https://w3id.org/digitalconstruction/Contexts#hasModalContext">hasModalContext</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSubContext"
                title="https://w3id.org/digitalconstruction/Contexts#hasSubContext">hasSubContext</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isSubContextOf"
@@ -123,12 +133,48 @@ This section provides details for each class and property defined by Digital Con
          <dd>
             <a href="#hasActiveContext"
                title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">hasActiveContext</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasActualContext"
+               title="https://w3id.org/digitalconstruction/Contexts#hasActualContext">hasActualContext</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasModalContext"
+               title="https://w3id.org/digitalconstruction/Contexts#hasModalContext">hasModalContext</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#isActiveInSet"
                title="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">isActiveInSet</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/QuantityKind">
+      <h3>qudt:QuantityKind<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/QuantityKind</p>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasQuantityKind"
+               title="https://w3id.org/digitalconstruction/Contexts#hasQuantityKind">hasQuantityKind</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/Unit">
+      <h3>qudt:Unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/Unit</p>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasUnit"
+               title="https://w3id.org/digitalconstruction/Contexts#hasUnit">hasUnit</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -201,12 +247,20 @@ This section provides details for each class and property defined by Digital Con
             title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">hasActiveContext</a>
       </li>
       <li>
+         <a href="#hasActualContext"
+            title="https://w3id.org/digitalconstruction/Contexts#hasActualContext">hasActualContext</a>
+      </li>
+      <li>
          <a href="#hasContext"
             title="https://w3id.org/digitalconstruction/Contexts#hasContext">hasContext</a>
       </li>
       <li>
          <a href="#hasDependent"
             title="https://w3id.org/digitalconstruction/Contexts#hasDependent">hasDependent</a>
+      </li>
+      <li>
+         <a href="#hasModalContext"
+            title="https://w3id.org/digitalconstruction/Contexts#hasModalContext">hasModalContext</a>
       </li>
       <li>
          <a href="#hasPropertyWithUnit"
@@ -299,6 +353,14 @@ This section provides details for each class and property defined by Digital Con
       </div>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasActualContext"
+                  title="https://w3id.org/digitalconstruction/Contexts#hasActualContext">hasActualContext</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasModalContext"
+                  title="https://w3id.org/digitalconstruction/Contexts#hasModalContext">hasModalContext</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ContextSet"
@@ -316,6 +378,39 @@ This section provides details for each class and property defined by Digital Con
                <a href="#isActiveInSet"
                   title="https://w3id.org/digitalconstruction/Contexts#isActiveInSet">isActiveInSet</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasActualContext">
+      <h3>hasActualContext<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Contexts#hasActualContext</p>
+      <div class="comment">
+         <span class="markdown">A context that contains data about intentions or expectations: plans, designs, simulation results, and so on.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasActiveContext"
+                  title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">hasActiveContext</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ContextSet"
+                  title="https://w3id.org/digitalconstruction/Contexts#ContextSet">ContextSet</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="https://w3id.org/digitalconstruction/Contexts#Context">Context</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -383,6 +478,39 @@ This section provides details for each class and property defined by Digital Con
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasModalContext">
+      <h3>hasModalContext<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/digitalconstruction/Contexts#hasModalContext</p>
+      <div class="comment">
+         <span class="markdown">A context that contains data about actually happened activities or implemented entities</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasActiveContext"
+                  title="https://w3id.org/digitalconstruction/Contexts#hasActiveContext">hasActiveContext</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ContextSet"
+                  title="https://w3id.org/digitalconstruction/Contexts#ContextSet">ContextSet</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Context"
+                  title="https://w3id.org/digitalconstruction/Contexts#Context">Context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasPropertyWithUnit">
       <h3>hasPropertyWithUnit<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -414,6 +542,11 @@ This section provides details for each class and property defined by Digital Con
             <dd>
                <a href="#UnitAssignment"
                   title="https://w3id.org/digitalconstruction/Contexts#UnitAssignment">UnitAssignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">qudt:QuantityKind</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -462,6 +595,11 @@ This section provides details for each class and property defined by Digital Con
             <dd>
                <a href="#UnitAssignment"
                   title="https://w3id.org/digitalconstruction/Contexts#UnitAssignment">UnitAssignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">qudt:Unit</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -709,13 +847,11 @@ This section provides details for each class and property defined by Digital Con
    <ul class="hlist">
       <li>
          <a href="#hasContent"
-            title="https://w3id.org/digitalconstruction/Contexts#hasContent">
-            <span>has content</span>
-         </a>
+            title="https://w3id.org/digitalconstruction/Contexts#hasContent">hasContent</a>
       </li>
    </ul>
    <div class="entity" id="hasContent">
-      <h3>has content<sup class="type-dp" title="data property">dp</sup>
+      <h3>hasContent<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -734,7 +870,9 @@ This section provides details for each class and property defined by Digital Con
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
             </dd>
          </dl>
       </div>
