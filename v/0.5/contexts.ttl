@@ -1,13 +1,12 @@
-@prefix : <https://w3id.org/digitalconstruction/Contexts#> .
+@prefix : <https://w3id.org/digitalconstruction/0.5/Contexts#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pro: <http://w3id.org/digitalconstruction/Processes#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/digitalconstruction/Contexts> .
+@base <https://w3id.org/digitalconstruction/0.5/Contexts> .
 
-<https://w3id.org/digitalconstruction/Contexts> rdf:type owl:Ontology ;
+<https://w3id.org/digitalconstruction/0.5/Contexts> rdf:type owl:Ontology ;
                                                  <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä" ,
                                                                                            "Yuan Zheng" ;
                                                  <http://purl.org/dc/elements/1.1/date> "2020-03-20" ;
@@ -17,9 +16,9 @@
                                                  <http://purl.org/dc/terms/description> "Context ontology provides the basic representation mechanisms for multi-context information in contruction and renovation projects" ;
                                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "dicc" ;
-                                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/digitalconstruction/Contexts" ;
+                                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/digitalconstruction/0.5/Contexts" ;
                                                  rdfs:label "Digital Construction Contexts" ;
-                                                 rdfs:seeAlso <https://w3id.org/digitalconstruction> .
+                                                 rdfs:seeAlso <https://w3id.org/digitalconstruction/0.5/> .
 
 #################################################################
 #    Annotation properties
