@@ -114,7 +114,6 @@
                  rdfs:comment "A context that contains data about actually happened activities or implemented entities" ;
                  rdfs:label "hasModalContext" .
 
-
 ###  https://w3id.org/digitalconstruction/Contexts#hasPropertyWithUnit
 :hasPropertyWithUnit rdf:type owl:ObjectProperty ;
                      rdfs:domain :UnitAssignment ;
@@ -124,7 +123,7 @@
 ###  https://w3id.org/digitalconstruction/Contexts#hasQuantityKind
 :hasQuantityKind rdf:type owl:ObjectProperty ;
                  rdfs:domain :UnitAssignment ;
-                 rdfs:range <http://qudt.org/schema/qudt/QuantityKind> ;
+		 # rdfs:range <http://qudt.org/schema/qudt/QuantityKind> ;
                  rdfs:label "hasQuantityKind" .
 
 
@@ -139,7 +138,7 @@
 ###  https://w3id.org/digitalconstruction/Contexts#hasUnit
 :hasUnit rdf:type owl:ObjectProperty ;
          rdfs:domain :UnitAssignment ;
-         rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+         # rdfs:range <http://qudt.org/schema/qudt/Unit> ;
          rdfs:label "hasUnit" .
 
 
@@ -218,14 +217,14 @@
 #    Classes
 #################################################################
 
-###  http://qudt.org/schema/qudt/QuantityKind
-<http://qudt.org/schema/qudt/QuantityKind> rdf:type owl:Class ;
-                                           rdfs:label "qudt:QuantityKind" .
+# ###  http://qudt.org/schema/qudt/QuantityKind
+# <http://qudt.org/schema/qudt/QuantityKind> rdf:type owl:Class ;
+#                                            rdfs:label "qudt:QuantityKind" .
 
 
-###  http://qudt.org/schema/qudt/Unit
-<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
-                                   rdfs:label "qudt:Unit" .
+# ###  http://qudt.org/schema/qudt/Unit
+# <http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+#                                    rdfs:label "qudt:Unit" .
 
 
 ###  https://w3id.org/digitalconstruction/Contexts#Context

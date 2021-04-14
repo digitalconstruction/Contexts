@@ -266,39 +266,7 @@
         <li><a href="#ContextSet">ContextSet</a></li>
         <li><a href="#UnitAssignment">UnitAssignment</a></li>
         <li><a href="#UnitFramework">UnitFramework</a></li>
-        <li><a href="#qudt:QuantityKind">qudt:QuantityKind</a></li>
-        <li><a href="#qudt:Unit">qudt:Unit</a></li>
     </ul>
-    <div class="entity class" id="qudt:QuantityKind">
-        <h3>qudt:QuantityKind<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://qudt.org/schema/qudt/QuantityKind</code></td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#hasQuantityKind">hasQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="qudt:Unit">
-        <h3>qudt:Unit<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://qudt.org/schema/qudt/Unit</code></td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#hasUnit">hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="Context">
         <h3>Context<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -315,32 +283,32 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#isSubContextOf">isSubContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasDependent">hasDependent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isActiveInSet">isActiveInSet</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#dependsOn">dependsOn</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isContextOf">isContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#previousContext">previousContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#nextContext">nextContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#dependsOn">dependsOn</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isActiveInSet">isActiveInSet</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasDependent">hasDependent</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isSubContextOf">isSubContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasContent">hasContent</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#hasUnitFramework">hasUnitFramework</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isContextOf">isContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#nextContext">nextContext</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasSubContext">hasSubContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasUnitFramework">hasUnitFramework</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#isSubContextOf">isSubContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasActualContext">hasActualContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isUnitFrameworkOf">isUnitFrameworkOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasSubContext">hasSubContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#previousContext">previousContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasActiveContext">hasActiveContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasModalContext">hasModalContext</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasDependent">hasDependent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#nextContext">nextContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isUnitFrameworkOf">isUnitFrameworkOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasActiveContext">hasActiveContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isSubContextOf">isSubContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasContext">hasContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#previousContext">previousContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasActualContext">hasActualContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasSubContext">hasSubContext</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#dependsOn">dependsOn</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasModalContext">hasModalContext</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#nextContext">nextContext</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -388,9 +356,9 @@
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#hasActualContext">hasActualContext</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasActiveContext">hasActiveContext</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasModalContext">hasModalContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasActualContext">hasActualContext</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -417,9 +385,9 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#hasQuantityKind">hasQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasUnit">hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasPropertyWithUnit">hasPropertyWithUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasUnit">hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasQuantityKind">hasQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -446,8 +414,8 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#isUnitFrameworkOf">isUnitFrameworkOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasUnitAssignment">hasUnitAssignment</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isUnitFrameworkOf">isUnitFrameworkOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -689,12 +657,6 @@
                     <a href="#UnitAssignment">UnitAssignment</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://qudt.org/schema/qudt/QuantityKind">http://qudt.org/schema/qudt/QuantityKind</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
         </table>
     </div>
     <div class="entity property" id="hasSubContext">
@@ -735,12 +697,6 @@
                 <th>Domain(s)</th>
                 <td>
                     <a href="#UnitAssignment">UnitAssignment</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://qudt.org/schema/qudt/Unit">http://qudt.org/schema/qudt/Unit</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
