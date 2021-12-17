@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Digital Construction Contexts</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    
-    <style>
-        #pylode {
+ <head>
+  <title>
+   Digital Construction Contexts
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <style>
+   #pylode {
             position: fixed;
             top: 130px;
             left: -60px;
@@ -184,10 +185,9 @@
             color: #336;
             text-decoration: none;
         }
-    </style>
-    
-    <script type="application/ld+json">
-      [
+  </style>
+  <script type="application/ld+json">
+   [
   {
     "@id": "https://w3id.org/digitalconstruction/0.5/Contexts",
     "@type": [
@@ -210,847 +210,2173 @@
     ]
   }
 ]
-    </script>
-</head>
-<body>
-  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
-    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
-    <span style="font-size:smaller;">2.8.5</span>
+  </script>
+ </head>
+ <body>
+  <div id="pylode">
+   made by
+   <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">
+     p
+    </span>
+    <span style="color:#f9cb33;">
+     y
+    </span>
+    LODE
+   </a>
+   <span style="font-size:smaller;">
+    2.8.5
+   </span>
   </div>
-  <h1>Digital Construction Contexts</h1>
-<section id="metadata">
-    <h2 style="display:none;">Metadata</h2>
-    <dl>
-        <dt>URI</dt>
-        <dd><code>https://w3id.org/digitalconstruction/0.5/Contexts</code></dd>
-        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
-        <dd>
-            Seppo Törmä<br/>
-            Yuan Zheng<br/>
-        </dd>
-        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">Created</a></dt>
-        <dd>2019-12-20</dd>
-        <dt>License</dt>
-        <dd><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></dd>
-        <dt>Ontology RDF</dt>
-        <dd><a href="contexts.ttl">RDF (turtle)</a></dd>
-    </dl>
-    <h2>Description</h2>
-    <div id="description">
-        <p>Context ontology provides the basic representation mechanisms for multi-context information in contruction and renovation projects</p>
-    </div>
-</section>
-<section id="toc">
-    <h2>Table of Contents</h2>
-    <ol>
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#objectproperties">Object Properties</a></li>
-        <li><a href="#annotationproperties">Annotation Properties</a></li>
-        <li><a href="#namespaces">Namespaces</a></li>
-        <li><a href="#legend">Legend</a></li>
-    </ol>
-</section>
-<section id="overview">
-    <h2>Overview</h2>
-    <div class="figure">
-        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
-        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
-    </div>
-</section>
-  <section id="classes">
-    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-    <ul class="hlist">
-        <li><a href="#Context">Context</a></li>
-        <li><a href="#ContextFramework">ContextFramework</a></li>
-        <li><a href="#ContextSet">ContextSet</a></li>
-        <li><a href="#UnitAssignment">UnitAssignment</a></li>
-        <li><a href="#UnitFramework">UnitFramework</a></li>
-    </ul>
-    <div class="entity class" id="Context">
-        <h3>Context<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#Context</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>An identified realm of data, representing the circumstances in which the data can be considered true. Examples are (1) intentional contexts such as a requirement definition, a plan or a design, (2) actual contexts such as actual activity execution or a model of constructed building (as-built model), or (3) a time period when a statement holds.</p>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#dependsOn">dependsOn</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasUnitFramework">hasUnitFramework</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isSubContextOf">isSubContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#nextContext">nextContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isContextOf">isContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isActiveInSet">isActiveInSet</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#previousContext">previousContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasDependent">hasDependent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasContent">hasContent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasSubContext">hasSubContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#nextContext">nextContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasContext">hasContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#previousContext">previousContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isUnitFrameworkOf">isUnitFrameworkOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#isSubContextOf">isSubContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasModalContext">hasModalContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasActiveContext">hasActiveContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasActualContext">hasActualContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasSubContext">hasSubContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasDependent">hasDependent</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#dependsOn">dependsOn</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="ContextFramework">
-        <h3>ContextFramework<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#ContextFramework</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Context framework is an identified collection of contexts that belong together. Examples are (1) a framework of design contexts consisting of as-is, as-designed, and as-built contexts, (2) a framework of management contexts consisting of contexts for planned and actual execution, and (3) a framework for levels of detail such as BIMForum2018 LOD model.</p>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#hasContext">hasContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#isContextOf">isContextOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="ContextSet">
-        <h3>ContextSet<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#ContextSet</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>A set of active contexts. It can include a compatible set of contexts for design information (e.g., LOD400 BIM models), organizational structures (e.g., location breakdown structure), a currenty valid master plan, compatible lookahead plan, the week plan for current week, and a context for actual execution data. The can be a unique "current ContexSet" and there can be ContextSet for different periods of time or for different renovation scenarios.</p>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#hasActiveContext">hasActiveContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasActualContext">hasActualContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasModalContext">hasModalContext</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#isActiveInSet">isActiveInSet</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="UnitAssignment">
-        <h3>UnitAssignment<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#UnitAssignment</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Specifies what units and quantity kinds are used for a specified property in the content graph. </p>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#hasUnit">hasUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasQuantityKind">hasQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasPropertyWithUnit">hasPropertyWithUnit</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#hasUnitAssignment">hasUnitAssignment</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="UnitFramework">
-        <h3>UnitFramework<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#UnitFramework</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>A collection of Specifies what units and quantity kinds are used for a specified property in the content graph</p>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#isUnitFrameworkOf">isUnitFrameworkOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasUnitAssignment">hasUnitAssignment</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#hasUnitFramework">hasUnitFramework</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-</section>
-<section id="objectproperties">
-    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-    <ul class="hlist">
-        <li><a href="#dependsOn">dependsOn</a></li>
-        <li><a href="#hasActiveContext">hasActiveContext</a></li>
-        <li><a href="#hasActualContext">hasActualContext</a></li>
-        <li><a href="#hasContent">hasContent</a></li>
-        <li><a href="#hasContext">hasContext</a></li>
-        <li><a href="#hasDependent">hasDependent</a></li>
-        <li><a href="#hasModalContext">hasModalContext</a></li>
-        <li><a href="#hasPropertyWithUnit">hasPropertyWithUnit</a></li>
-        <li><a href="#hasQuantityKind">hasQuantityKind</a></li>
-        <li><a href="#hasSubContext">hasSubContext</a></li>
-        <li><a href="#hasUnit">hasUnit</a></li>
-        <li><a href="#hasUnitAssignment">hasUnitAssignment</a></li>
-        <li><a href="#hasUnitFramework">hasUnitFramework</a></li>
-        <li><a href="#isActiveInSet">isActiveInSet</a></li>
-        <li><a href="#isContextOf">isContextOf</a></li>
-        <li><a href="#isSubContextOf">isSubContextOf</a></li>
-        <li><a href="#isUnitFrameworkOf">isUnitFrameworkOf</a></li>
-        <li><a href="#nextContext">nextContext</a></li>
-        <li><a href="#previousContext">previousContext</a></li>
-    </ul>
-    <div class="entity property" id="dependsOn">
-        <h3>dependsOn<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#dependsOn</code></td>
-            </tr>
-            <tr>
-                <th>Inverse properties</th>
-                <td>
-                    <a href="#hasDependent">hasDependent</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasActiveContext">
-        <h3>hasActiveContext<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasActiveContext</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A context that is active in the ContextSet
-                </td>
-            </tr>
-            <tr>
-                <th>Inverse properties</th>
-                <td>
-                    <a href="#isActiveInSet">isActiveInSet</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#ContextSet">ContextSet</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasActualContext">
-        <h3>hasActualContext<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasActualContext</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A context that contains data about intentions or expectations: plans, designs, simulation results, and so on.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#hasActiveContext">hasActiveContext</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#ContextSet">ContextSet</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasContent">
-        <h3>hasContent<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasContent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    Association of a context to the named graph that contains the contents of the context.
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasContext">
-        <h3>hasContext<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasContext</code></td>
-            </tr>
-            <tr>
-                <th>Inverse properties</th>
-                <td>
-                    <a href="#isContextOf">isContextOf</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#ContextFramework">ContextFramework</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasDependent">
-        <h3>hasDependent<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasDependent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design.
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasModalContext">
-        <h3>hasModalContext<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasModalContext</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A context that contains data about actually happened activities or implemented entities
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#hasActiveContext">hasActiveContext</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#ContextSet">ContextSet</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasPropertyWithUnit">
-        <h3>hasPropertyWithUnit<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasPropertyWithUnit</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#UnitAssignment">UnitAssignment</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasQuantityKind">
-        <h3>hasQuantityKind<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasQuantityKind</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#UnitAssignment">UnitAssignment</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasSubContext">
-        <h3>hasSubContext<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasSubContext</code></td>
-            </tr>
-            <tr>
-                <th>Inverse properties</th>
-                <td>
-                    <a href="#isSubContextOf">isSubContextOf</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasUnit">
-        <h3>hasUnit<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasUnit</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#UnitAssignment">UnitAssignment</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasUnitAssignment">
-        <h3>hasUnitAssignment<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasUnitAssignment</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#UnitFramework">UnitFramework</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#UnitAssignment">UnitAssignment</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasUnitFramework">
-        <h3>hasUnitFramework<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#hasUnitFramework</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    Relation of a Context to a UnitFramework
-                </td>
-            </tr>
-            <tr>
-                <th>Inverse properties</th>
-                <td>
-                    <a href="#isUnitFrameworkOf">isUnitFrameworkOf</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#UnitFramework">UnitFramework</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="isActiveInSet">
-        <h3>isActiveInSet<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#isActiveInSet</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#ContextSet">ContextSet</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="isContextOf">
-        <h3>isContextOf<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#isContextOf</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#ContextFramework">ContextFramework</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="isSubContextOf">
-        <h3>isSubContextOf<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#isSubContextOf</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="isUnitFrameworkOf">
-        <h3>isUnitFrameworkOf<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#isUnitFrameworkOf</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#UnitFramework">UnitFramework</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="nextContext">
-        <h3>nextContext<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#nextContext</code></td>
-            </tr>
-            <tr>
-                <th>Inverse properties</th>
-                <td>
-                    <a href="#previousContext">previousContext</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="previousContext">
-        <h3>previousContext<sup title="object property" class="sup-op">op</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://w3id.org/digitalconstruction/0.5/Contexts#previousContext</code></td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="#Context">Context</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-</section>
-
-<section id="annotationproperties">
-    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-    <ul class="hlist">
-        <li><a href="#creator">creator</a></li>
-        <li><a href="#date">date</a></li>
-        <li><a href="#title">title</a></li>
-        <li><a href="#abstract">abstract</a></li>
-        <li><a href="#created">created</a></li>
-        <li><a href="#description">description</a></li>
-        <li><a href="#license">license</a></li>
-        <li><a href="#preferredNamespacePrefix">preferredNamespacePrefix</a></li>
-        <li><a href="#preferredNamespaceUri">preferredNamespaceUri</a></li>
-    </ul>
-    <div class="entity property" id="creator">
-        <h3>creator<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/dc/elements/1.1/creator</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="date">
-        <h3>date<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/dc/elements/1.1/date</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="title">
-        <h3>title<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/dc/elements/1.1/title</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="abstract">
-        <h3>abstract<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/dc/terms/abstract</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="created">
-        <h3>created<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/dc/terms/created</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="description">
-        <h3>description<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/dc/terms/description</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="license">
-        <h3>license<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/dc/terms/license</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="preferredNamespacePrefix">
-        <h3>preferredNamespacePrefix<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/vocab/vann/preferredNamespacePrefix</code></td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="preferredNamespaceUri">
-        <h3>preferredNamespaceUri<sup title="annotation property" class="sup-ap">ap</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.org/vocab/vann/preferredNamespaceUri</code></td>
-            </tr>
-        </table>
-    </div>
-</section>
-
-  
-  <section id="namedindividuals">
-    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-    <ul class="hlist">
-    </ul>
-</section>
-  
-  <section id="namespaces">
-    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
-    <dl>
-        <dt>:</dt>
-        <dd><code>https://w3id.org/digitalconstruction/0.5/Contexts#</code></dd>
-        <dt>owl</dt>
-        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
-        <dt>prov</dt>
-        <dd><code>http://www.w3.org/ns/prov#</code></dd>
-        <dt>rdf</dt>
-        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
-        <dt>rdfs</dt>
-        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
-        <dt>sdo</dt>
-        <dd><code>https://schema.org/</code></dd>
-        <dt>skos</dt>
-        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
-        <dt>xsd</dt>
-        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
-    </dl>
-</section>
-  <section id="legend">
-      <h2>Legend</h2>
-      <table class="entity">
-          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
-          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
-          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
-          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
-          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
-          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
-          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
-      </table>
+  <h1>
+   Digital Construction Contexts
+  </h1>
+  <section id="metadata">
+   <h2 style="display:none;">
+    Metadata
+   </h2>
+   <dl>
+    <dt>
+     URI
+    </dt>
+    <dd>
+     <code>
+      https://w3id.org/digitalconstruction/0.5/Contexts
+     </code>
+    </dd>
+    <dt>
+     <a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">
+      Creator
+     </a>
+     (s)
+    </dt>
+    <dd>
+     Seppo Törmä
+     <br/>
+     Yuan Zheng
+     <br/>
+    </dd>
+    <dt>
+     <a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">
+      Created
+     </a>
+    </dt>
+    <dd>
+     2019-12-20
+    </dd>
+    <dt>
+     License
+    </dt>
+    <dd>
+     <a href="https://creativecommons.org/licenses/by/4.0/">
+      https://creativecommons.org/licenses/by/4.0/
+     </a>
+    </dd>
+    <dt>
+     Ontology RDF
+    </dt>
+    <dd>
+     <a href="contexts.ttl">
+      RDF (turtle)
+     </a>
+    </dd>
+   </dl>
+   <h2>
+    Description
+   </h2>
+   <div id="description">
+    <p>
+     Context ontology provides the basic representation mechanisms for multi-context information in contruction and renovation projects
+    </p>
+   </div>
   </section>
-</body>
+  <section id="toc">
+   <h2>
+    Table of Contents
+   </h2>
+   <ol>
+    <li>
+     <a href="#classes">
+      Classes
+     </a>
+    </li>
+    <li>
+     <a href="#objectproperties">
+      Object Properties
+     </a>
+    </li>
+    <li>
+     <a href="#annotationproperties">
+      Annotation Properties
+     </a>
+    </li>
+    <li>
+     <a href="#namespaces">
+      Namespaces
+     </a>
+    </li>
+    <li>
+     <a href="#legend">
+      Legend
+     </a>
+    </li>
+   </ol>
+  </section>
+  <section id="overview">
+   <h2>
+    Overview
+   </h2>
+   <p>
+    The Digital Construction Contexts contain the definitions to maintain different realms of
+information, for instance, information about
+    <ul>
+     <li>
+      as-is, as-designed, as-built and as-maintained models,
+     </li>
+     <li>
+      planned versus actual execution of activities,
+     </li>
+     <li>
+      models containing information up to a specific LOD level,
+     </li>
+     <li>
+      plans for alternative construction methods or renovation scenarios.
+     </li>
+    </ul>
+   </p>
+   <center>
+    <p>
+     <img src="context.drawio.svg" width="80%"/>
+    </p>
+   </center>
+   <p>
+    The central class is
+    <tt>
+     dicc:Context
+    </tt>
+    that through
+    <tt>
+     dicc:hasContent
+    </tt>
+    refers to a
+    <em>
+     named graph
+    </em>
+    (of an
+    <a href="https://www.w3.org/TR/rdf11-concepts/#section-dataset">
+     RDF dataset
+    </a>
+    ). Each different
+model, version, or plan needs to have its own context; as a result its data is contained is a
+separate named graph, which makes it possible to separate actual values from planned values, etc.
+   </p>
+   <p>
+    Contexts are thematically organized into context frameworks (
+    <tt>
+     dicc:ContextFrameworks
+    </tt>
+    ). An
+example is the USA BIMForum LOD framework. Different contexts can be active at different
+situations, which can be represented with context sets (
+    <tt>
+     dicc:ContextSet
+    </tt>
+    ). For example,
+there can be a default context set that specifies the currently active contexts. There can also be
+context sets for different milestones that specify the context that were active at the time of the
+milestone.
+   </p>
+  </section>
+  <section id="classes">
+   <h2>
+    Classes
+    <span style="float:right; font-size:smaller;">
+     <a href="">
+      &amp;uparrow
+     </a>
+    </span>
+   </h2>
+   <ul class="hlist">
+    <li>
+     <a href="#Context">
+      Context
+     </a>
+    </li>
+    <li>
+     <a href="#ContextFramework">
+      ContextFramework
+     </a>
+    </li>
+    <li>
+     <a href="#ContextSet">
+      ContextSet
+     </a>
+    </li>
+    <li>
+     <a href="#UnitAssignment">
+      UnitAssignment
+     </a>
+    </li>
+    <li>
+     <a href="#UnitFramework">
+      UnitFramework
+     </a>
+    </li>
+   </ul>
+   <div class="entity class" id="Context">
+    <h3>
+     Context
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#Context
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        An identified realm of data, representing the circumstances in which the data can be considered true. Examples are (1) intentional contexts such as a requirement definition, a plan or a design, (2) actual contexts such as actual activity execution or a model of constructed building (as-built model), or (3) a time period when a statement holds.
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In domain of
+      </th>
+      <td>
+       <a href="#isActiveInSet">
+        isActiveInSet
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasUnitFramework">
+        hasUnitFramework
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#dependsOn">
+        dependsOn
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#nextContext">
+        nextContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isContextOf">
+        isContextOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasContent">
+        hasContent
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isSubContextOf">
+        isSubContextOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#previousContext">
+        previousContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasDependent">
+        hasDependent
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasSubContext">
+        hasSubContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#hasSubContext">
+        hasSubContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasModalContext">
+        hasModalContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasContext">
+        hasContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#dependsOn">
+        dependsOn
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isSubContextOf">
+        isSubContextOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasActualContext">
+        hasActualContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#nextContext">
+        nextContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasActiveContext">
+        hasActiveContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isUnitFrameworkOf">
+        isUnitFrameworkOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#previousContext">
+        previousContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasDependent">
+        hasDependent
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="ContextFramework">
+    <h3>
+     ContextFramework
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#ContextFramework
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        Context framework is an identified collection of contexts that belong together. Examples are (1) a framework of design contexts consisting of as-is, as-designed, and as-built contexts, (2) a framework of management contexts consisting of contexts for planned and actual execution, and (3) a framework for levels of detail such as BIMForum2018 LOD model.
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In domain of
+      </th>
+      <td>
+       <a href="#hasContext">
+        hasContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#isContextOf">
+        isContextOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="ContextSet">
+    <h3>
+     ContextSet
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#ContextSet
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        A set of active contexts. It can include a compatible set of contexts for design information (e.g., LOD400 BIM models), organizational structures (e.g., location breakdown structure), a currenty valid master plan, compatible lookahead plan, the week plan for current week, and a context for actual execution data. The can be a unique "current ContexSet" and there can be ContextSet for different periods of time or for different renovation scenarios.
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In domain of
+      </th>
+      <td>
+       <a href="#hasActualContext">
+        hasActualContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasModalContext">
+        hasModalContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasActiveContext">
+        hasActiveContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#isActiveInSet">
+        isActiveInSet
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="UnitAssignment">
+    <h3>
+     UnitAssignment
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#UnitAssignment
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        Specifies what units and quantity kinds are used for a specified property in the content graph.
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In domain of
+      </th>
+      <td>
+       <a href="#hasPropertyWithUnit">
+        hasPropertyWithUnit
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasQuantityKind">
+        hasQuantityKind
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#hasUnit">
+        hasUnit
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#hasUnitAssignment">
+        hasUnitAssignment
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity class" id="UnitFramework">
+    <h3>
+     UnitFramework
+     <sup class="sup-c" title="class">
+      c
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#UnitFramework
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       <p>
+        A collection of Specifies what units and quantity kinds are used for a specified property in the content graph
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In domain of
+      </th>
+      <td>
+       <a href="#hasUnitAssignment">
+        hasUnitAssignment
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+       <a href="#isUnitFrameworkOf">
+        isUnitFrameworkOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       In range of
+      </th>
+      <td>
+       <a href="#hasUnitFramework">
+        hasUnitFramework
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <br/>
+      </td>
+     </tr>
+    </table>
+   </div>
+  </section>
+  <section id="objectproperties">
+   <h2>
+    Object Properties
+    <span style="float:right; font-size:smaller;">
+     <a href="">
+      &amp;uparrow
+     </a>
+    </span>
+   </h2>
+   <ul class="hlist">
+    <li>
+     <a href="#dependsOn">
+      dependsOn
+     </a>
+    </li>
+    <li>
+     <a href="#hasActiveContext">
+      hasActiveContext
+     </a>
+    </li>
+    <li>
+     <a href="#hasActualContext">
+      hasActualContext
+     </a>
+    </li>
+    <li>
+     <a href="#hasContent">
+      hasContent
+     </a>
+    </li>
+    <li>
+     <a href="#hasContext">
+      hasContext
+     </a>
+    </li>
+    <li>
+     <a href="#hasDependent">
+      hasDependent
+     </a>
+    </li>
+    <li>
+     <a href="#hasModalContext">
+      hasModalContext
+     </a>
+    </li>
+    <li>
+     <a href="#hasPropertyWithUnit">
+      hasPropertyWithUnit
+     </a>
+    </li>
+    <li>
+     <a href="#hasQuantityKind">
+      hasQuantityKind
+     </a>
+    </li>
+    <li>
+     <a href="#hasSubContext">
+      hasSubContext
+     </a>
+    </li>
+    <li>
+     <a href="#hasUnit">
+      hasUnit
+     </a>
+    </li>
+    <li>
+     <a href="#hasUnitAssignment">
+      hasUnitAssignment
+     </a>
+    </li>
+    <li>
+     <a href="#hasUnitFramework">
+      hasUnitFramework
+     </a>
+    </li>
+    <li>
+     <a href="#isActiveInSet">
+      isActiveInSet
+     </a>
+    </li>
+    <li>
+     <a href="#isContextOf">
+      isContextOf
+     </a>
+    </li>
+    <li>
+     <a href="#isSubContextOf">
+      isSubContextOf
+     </a>
+    </li>
+    <li>
+     <a href="#isUnitFrameworkOf">
+      isUnitFrameworkOf
+     </a>
+    </li>
+    <li>
+     <a href="#nextContext">
+      nextContext
+     </a>
+    </li>
+    <li>
+     <a href="#previousContext">
+      previousContext
+     </a>
+    </li>
+   </ul>
+   <div class="entity property" id="dependsOn">
+    <h3>
+     dependsOn
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#dependsOn
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Inverse properties
+      </th>
+      <td>
+       <a href="#hasDependent">
+        hasDependent
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasActiveContext">
+    <h3>
+     hasActiveContext
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasActiveContext
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       A context that is active in the ContextSet
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Inverse properties
+      </th>
+      <td>
+       <a href="#isActiveInSet">
+        isActiveInSet
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#ContextSet">
+        ContextSet
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasActualContext">
+    <h3>
+     hasActualContext
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasActualContext
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       A context that contains data about intentions or expectations: plans, designs, simulation results, and so on.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-properties
+      </th>
+      <td>
+       <a href="#hasActiveContext">
+        hasActiveContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#ContextSet">
+        ContextSet
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasContent">
+    <h3>
+     hasContent
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasContent
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Association of a context to the named graph that contains the contents of the context.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Resource">
+        rdfs:Resource
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasContext">
+    <h3>
+     hasContext
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasContext
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Inverse properties
+      </th>
+      <td>
+       <a href="#isContextOf">
+        isContextOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#ContextFramework">
+        ContextFramework
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasDependent">
+    <h3>
+     hasDependent
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasDependent
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Association between two contexts in different context frameworks, indicating that the content of the first context depends on or is based on the content in the second context. For example, a construction plan can be based on a particular LOD model of the design.
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasModalContext">
+    <h3>
+     hasModalContext
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasModalContext
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       A context that contains data about actually happened activities or implemented entities
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Super-properties
+      </th>
+      <td>
+       <a href="#hasActiveContext">
+        hasActiveContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#ContextSet">
+        ContextSet
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasPropertyWithUnit">
+    <h3>
+     hasPropertyWithUnit
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasPropertyWithUnit
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#UnitAssignment">
+        UnitAssignment
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasQuantityKind">
+    <h3>
+     hasQuantityKind
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasQuantityKind
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#UnitAssignment">
+        UnitAssignment
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasSubContext">
+    <h3>
+     hasSubContext
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasSubContext
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Inverse properties
+      </th>
+      <td>
+       <a href="#isSubContextOf">
+        isSubContextOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasUnit">
+    <h3>
+     hasUnit
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasUnit
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#UnitAssignment">
+        UnitAssignment
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasUnitAssignment">
+    <h3>
+     hasUnitAssignment
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasUnitAssignment
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#UnitFramework">
+        UnitFramework
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#UnitAssignment">
+        UnitAssignment
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="hasUnitFramework">
+    <h3>
+     hasUnitFramework
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#hasUnitFramework
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Description
+      </th>
+      <td>
+       Relation of a Context to a UnitFramework
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Inverse properties
+      </th>
+      <td>
+       <a href="#isUnitFrameworkOf">
+        isUnitFrameworkOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#UnitFramework">
+        UnitFramework
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="isActiveInSet">
+    <h3>
+     isActiveInSet
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#isActiveInSet
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#ContextSet">
+        ContextSet
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="isContextOf">
+    <h3>
+     isContextOf
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#isContextOf
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#ContextFramework">
+        ContextFramework
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="isSubContextOf">
+    <h3>
+     isSubContextOf
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#isSubContextOf
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="isUnitFrameworkOf">
+    <h3>
+     isUnitFrameworkOf
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#isUnitFrameworkOf
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#UnitFramework">
+        UnitFramework
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="nextContext">
+    <h3>
+     nextContext
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#nextContext
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Inverse properties
+      </th>
+      <td>
+       <a href="#previousContext">
+        previousContext
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="previousContext">
+    <h3>
+     previousContext
+     <sup class="sup-op" title="object property">
+      op
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        https://w3id.org/digitalconstruction/0.5/Contexts#previousContext
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Domain(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Range(s)
+      </th>
+      <td>
+       <a href="#Context">
+        Context
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+      </td>
+     </tr>
+    </table>
+   </div>
+  </section>
+  <section id="annotationproperties">
+   <h2>
+    Annotation Properties
+    <span style="float:right; font-size:smaller;">
+     <a href="">
+      &amp;uparrow
+     </a>
+    </span>
+   </h2>
+   <ul class="hlist">
+    <li>
+     <a href="#creator">
+      creator
+     </a>
+    </li>
+    <li>
+     <a href="#date">
+      date
+     </a>
+    </li>
+    <li>
+     <a href="#title">
+      title
+     </a>
+    </li>
+    <li>
+     <a href="#abstract">
+      abstract
+     </a>
+    </li>
+    <li>
+     <a href="#created">
+      created
+     </a>
+    </li>
+    <li>
+     <a href="#description">
+      description
+     </a>
+    </li>
+    <li>
+     <a href="#license">
+      license
+     </a>
+    </li>
+    <li>
+     <a href="#preferredNamespacePrefix">
+      preferredNamespacePrefix
+     </a>
+    </li>
+    <li>
+     <a href="#preferredNamespaceUri">
+      preferredNamespaceUri
+     </a>
+    </li>
+   </ul>
+   <div class="entity property" id="creator">
+    <h3>
+     creator
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/dc/elements/1.1/creator
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="date">
+    <h3>
+     date
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/dc/elements/1.1/date
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="title">
+    <h3>
+     title
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/dc/elements/1.1/title
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="abstract">
+    <h3>
+     abstract
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/dc/terms/abstract
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="created">
+    <h3>
+     created
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/dc/terms/created
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="description">
+    <h3>
+     description
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/dc/terms/description
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="license">
+    <h3>
+     license
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/dc/terms/license
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="preferredNamespacePrefix">
+    <h3>
+     preferredNamespacePrefix
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/vocab/vann/preferredNamespacePrefix
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="entity property" id="preferredNamespaceUri">
+    <h3>
+     preferredNamespaceUri
+     <sup class="sup-ap" title="annotation property">
+      ap
+     </sup>
+    </h3>
+    <table>
+     <tr>
+      <th>
+       URI
+      </th>
+      <td>
+       <code>
+        http://purl.org/vocab/vann/preferredNamespaceUri
+       </code>
+      </td>
+     </tr>
+    </table>
+   </div>
+  </section>
+  <section id="namedindividuals">
+   <h2>
+    Named Individuals
+    <span style="float:right; font-size:smaller;">
+     <a href="">
+      &amp;uparrow
+     </a>
+    </span>
+   </h2>
+   <ul class="hlist">
+   </ul>
+  </section>
+  <section id="namespaces">
+   <h2>
+    Namespaces
+    <span style="float:right; font-size:smaller;">
+     <a href="">
+      &amp;uparrow
+     </a>
+    </span>
+   </h2>
+   <dl>
+    <dt>
+     :
+    </dt>
+    <dd>
+     <code>
+      https://w3id.org/digitalconstruction/0.5/Contexts#
+     </code>
+    </dd>
+    <dt>
+     owl
+    </dt>
+    <dd>
+     <code>
+      http://www.w3.org/2002/07/owl#
+     </code>
+    </dd>
+    <dt>
+     prov
+    </dt>
+    <dd>
+     <code>
+      http://www.w3.org/ns/prov#
+     </code>
+    </dd>
+    <dt>
+     rdf
+    </dt>
+    <dd>
+     <code>
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#
+     </code>
+    </dd>
+    <dt>
+     rdfs
+    </dt>
+    <dd>
+     <code>
+      http://www.w3.org/2000/01/rdf-schema#
+     </code>
+    </dd>
+    <dt>
+     sdo
+    </dt>
+    <dd>
+     <code>
+      https://schema.org/
+     </code>
+    </dd>
+    <dt>
+     skos
+    </dt>
+    <dd>
+     <code>
+      http://www.w3.org/2004/02/skos/core#
+     </code>
+    </dd>
+    <dt>
+     xsd
+    </dt>
+    <dd>
+     <code>
+      http://www.w3.org/2001/XMLSchema#
+     </code>
+    </dd>
+   </dl>
+  </section>
+  <section id="legend">
+   <h2>
+    Legend
+   </h2>
+   <table class="entity">
+    <tr>
+     <td>
+      <sup class="sup-c" title="Classes">
+       c
+      </sup>
+     </td>
+     <td>
+      Classes
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <sup class="sup-op" title="Object Properties">
+       op
+      </sup>
+     </td>
+     <td>
+      Object Properties
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <sup class="sup-fp" title="Functional Properties">
+       fp
+      </sup>
+     </td>
+     <td>
+      Functional Properties
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <sup class="sup-dp" title="Data Properties">
+       dp
+      </sup>
+     </td>
+     <td>
+      Data Properties
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <sup class="sup-ap" title="Annotation Properties">
+       dp
+      </sup>
+     </td>
+     <td>
+      Annotation Properties
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <sup class="sup-p" title="Properties">
+       p
+      </sup>
+     </td>
+     <td>
+      Properties
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <sup class="sup-ni" title="Named Individuals">
+       ni
+      </sup>
+     </td>
+     <td>
+      Named Individuals
+     </td>
+    </tr>
+   </table>
+  </section>
+ </body>
 </html>
